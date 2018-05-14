@@ -1,0 +1,31 @@
+{
+  "name": "WolfkidFake",
+  "version": "1.0.0",
+  "description": "Simple Bot For Some Random User Call Wolfkid",
+  "main": "index.js",
+  "engines": {
+    "node": "10.0.0",
+    "npm": "*"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wolfkid200444/WolfkidFakeBot.git"
+  },
+  "keywords": [
+    "heroku",
+    "discord.js"
+  ],
+  "author": "Wolfie",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Wolfkid200444/WolfkidFakeBot/issues"
+  },
+  "homepage": "https://github.com/Wolfkid20044/WolfkidFakeBot#readme",
+  "dependencies": {
+    "discord.js": "11.3.2"
+  }
+}
