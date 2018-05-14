@@ -16,8 +16,8 @@ client.on('message', async message => {
       .setColor('#FFFF00')
       .addField('GitHub', 'https://github.com/Wolfkid200444/FakeWolfkidBOT')
       .addField('Report Issues')
-      .setURL('https://github.com/Wolfkid200444/FakeWolfkidBOT/issues')
-      .addField('Discord', 'http://bit.ly/FutureDevs')
+      .setDescription('[Check Out My Discord](http://bit.ly/FutureDevs)')
+
 
       return message.channel.send(aboutembed);
     };
