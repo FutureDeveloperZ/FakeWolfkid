@@ -21,9 +21,9 @@ client.on('message', async message => {
       .addField('$ver', 'Bot Server Status')
       .setColor('#FFFF08')
 
-      return msg.channel.send(helpembed);
+      return message.channel.send(helpembed);
     };
-gsvsvsb 
+ 
     if (message.content === '!about') {
       let aboutembed = new Discord.RichEmbed()
       .setTitle('Want to Know More About Me?')
