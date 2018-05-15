@@ -1,5 +1,5 @@
 # WolfkidFakeBot
-This is a simple bot that I stole code from a another bot, don't judge me xD
+This is a simple bot that I stole code from another bot, don't judge me xD
 This bot is still in beta.
 
 ## To Do List
@@ -25,4 +25,4 @@ Check out my [Twitter](https://twitter.com/@TheRealWolfkid)
 If you have any issues or bugs [click me](https://github.com/Wolfkid200444/FakeWolfkidBOT/issues) or go to out my [Discord](https://discord.gg/Z42u23M) server!
 
 ## Credits
-Thanks to @Wolfkid20044 and the contributors for making this bot on how it is now.<br>
+Thanks to @Wolfkid20044 and the [contributors](https://github.com/FutureDeveloperZ/FakeWolfkid/graphs/contributors) for making this bot how it is now.
