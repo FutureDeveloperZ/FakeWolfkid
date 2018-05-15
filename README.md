@@ -10,8 +10,8 @@ This bot is still in beta.
 - [x] Make it Work
 - [ ] Learn how to Code
 - [X] Fix The Bot Code
-- [ ] Make Embed Commands
-- [ ] Public
+- [X] Make Embed Commands
+- [ ]  Make it Public
 - [X] Out pass my Friends Bots
 - [ ] Learn proper grammar
 
