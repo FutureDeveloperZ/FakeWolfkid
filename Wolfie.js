@@ -9,6 +9,21 @@ client.on('ready', () => {
 client.on('message', async message => {
     if(message.author.bot) return;
 
+    if (msg.content === '$help') {
+      let helpembed = new Discord.RichEmbed()
+      .setTitle('ImpladeBot Commands List')
+      .setDescription('There is available commands for this bot on list!')
+      .addField('$help', 'Bot commands list!')
+      .addField('$ghostview', 'GhostView Plugin Info')
+      .addField('$dcinvite', 'Join our developer team on Discord server!')
+      .addField('$info', 'Bot Information')
+      .addField('$github', 'ImpladeDeveloped Github Team!')
+      .addField('$ver', 'Bot Server Status')
+      .setColor('#FFFF08')
+
+      return msg.channel.send(helpembed);
+    };
+gsvsvsb 
     if (message.content === '!about') {
       let aboutembed = new Discord.RichEmbed()
       .setTitle('Want to Know More About Me?')
@@ -31,7 +46,7 @@ client.on('message', async message => {
       return message.channel.send(channelembed);
     };
 
-    if (message.content === '!info') {
+    if (message.content === '!ver) {
       let infoembed = new Discord.RichEmbed()
       .setTitle('Information')
       .setDescription('This bot was created on 11 May 2018 by using code with Discord.js!')
@@ -51,15 +66,6 @@ client.on('message', async message => {
       .setColor('#808000')
       
       return message.channel.send(changelogembed);
-    };
-
-    if (message.content === '!help') {
-      let helpembed = new Discord.RichEmbed()
-      .setDescription('Help Commands')
-      .setColor('#FFFF00')
-      .setField('!help-Command', 'Give this help Comamnd')
-
-      return message.channel.send(helpembed);
     };
 });
 
