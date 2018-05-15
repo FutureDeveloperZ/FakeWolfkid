@@ -47,14 +47,16 @@ gsvsvsb
     };
 
     if (message.content === '!ver) {
-      let infoembed = new Discord.RichEmbed()
-      .setTitle('Information')
+      let verembed = new Discord.RichEmbed()
+      .setTitle('Version')
       .setDescription('This bot was created on 11 May 2018 by using code with Discord.js!')
+      .setField('Version', 'FWK-1.2')
+      .addField('Donate', 'https://paypal.me/wolfkid20044')
       .addField('Owner', 'WolfKid200444')
       .addField('Twitter', 'https://mobile.twitter.com/@TheRealWolfkid/')
       .setColor('#FFFF08')
 
-      return message.channel.send(infoembed);
+      return message.channel.send(verembed);
     };
 
     if (message.content === '!changelog') {
