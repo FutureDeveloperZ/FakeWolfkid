@@ -9,6 +9,21 @@ client.on('ready', () => {
 client.on('message', async message => {
     if(message.author.bot) return;
 
+    if (msg.content === '!help') {
+      let helpembed = new Discord.RichEmbed()
+      .setTitle('ImpladeBot Commands List')
+      .setDescription('There is available commands for this bot on list!')
+      .addField('!help', 'Bot commands list!')
+      .addField('!ghostview', 'GhostView Plugin Info')
+      .addField('!dcinvite', 'Join our developer team on Discord server!')
+      .addField('!info', 'Bot Information')
+      .addField('!github', 'FutureDevelopers Github Team!')
+      .addField('!ver', 'Bot Server Status')
+      .setColor('#FFFF08')
+
+      return message.channel.send(helpembed);
+    };
+ 
     if (message.content === '!about') {
       let aboutembed = new Discord.RichEmbed()
       .setTitle('Want to Know More About Me?')
@@ -31,15 +46,17 @@ client.on('message', async message => {
       return message.channel.send(channelembed);
     };
 
-    if (message.content === '!info') {
-      let infoembed = new Discord.RichEmbed()
-      .setTitle('Information')
+    if (message.content === '!ver') {
+      let verembed = new Discord.RichEmbed()
+      .setTitle('Version')
       .setDescription('This bot was created on 11 May 2018 by using code with Discord.js!')
+      .setField('Version', 'FWK-1.2')
+      .addField('Donate', 'https://paypal.me/wolfkid20044')
       .addField('Owner', 'WolfKid200444')
       .addField('Twitter', 'https://mobile.twitter.com/@TheRealWolfkid/')
       .setColor('#FFFF08')
 
-      return message.channel.send(infoembed);
+      return message.channel.send(verembed);
     };
 
     if (message.content === '!changelog') {
@@ -51,15 +68,6 @@ client.on('message', async message => {
       .setColor('#808000')
       
       return message.channel.send(changelogembed);
-    };
-
-    if (message.content === '!help') {
-      let helpembed = new Discord.RichEmbed()
-      .setDescription('Help Commands')
-      .setColor('#FFFF00')
-      .setField('!help-Command', 'Give this help Comamnd')
-
-      return message.channel.send(helpembed);
     };
 });
 
