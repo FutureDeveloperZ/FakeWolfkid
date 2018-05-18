@@ -54,7 +54,7 @@ client.on('message', async message => {
       let verembed = new Discord.RichEmbed()
       .setTitle('Version')
       .setDescription('This bot was created on 11 May 2018 by using code with Discord.js!')
-      .setField('Version', 'FWK-1.2')
+      .setField('Version', 'FWK-1.2 Unstable')
 
       return message.channel.send(verembed);
     };
@@ -65,6 +65,7 @@ client.on('message', async message => {
       .setDescription('Check out Whats New on The Bot :D')
       .addField('May 11 2018 News', 'Code Added')
       .addField('May 14 2018 News Huge Update', 'Added Embeds To Commands And Alot')
+      .addField('May 18 2018 News', 'Added Help Command And Few Commands Working again')
       .setColor('#808000')
       
       return message.channel.send(changelogembed);
@@ -72,11 +73,21 @@ client.on('message', async message => {
     
     if (message.content === '!github') {
       let githubembed = new Discord.RichEmbed()
-      .setTitle('Out Github')
+      .setTitle('Check Out our Github')
       .setDescription('Check out our [github](github.com/FutureDeveloperz) to view all of our code or our repository')
       .setColor('#000000')
       
       return message.channel.send(githubembed);
+    };
+    
+    if (message.content === '!dcinvite') {
+      let dcinviteembed = new Discord.RichEmbed()
+      .setTitle('Our Discord Invite')
+      .setDecription('Check out our Discord server to get news of FakeWolfkid and if you have issues with the bot or not working property you can report it on #report or jn our Github')
+      .setField('The Link', 'The link is bit.ly/FutureDevs')
+      .setURL('bit.ly/FutureDevs')
+      
+      return message.channel.send(dcinviteembed);
     };
 });
 
