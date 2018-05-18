@@ -9,7 +9,7 @@ client.on('ready', () => {
 client.on('message', async message => {
     if(message.author.bot) return;
 
-    if (msg.content === '!help') {
+    if (message.content === '!help') {
       let helpembed = new Discord.RichEmbed()
       .setTitle('ImpladeBot Commands List')
       .setDescription('There is available commands for this bot on list!')
@@ -37,7 +37,7 @@ client.on('message', async message => {
       return message.channel.send(aboutembed);
     };
 
-    if (message.content ==='!channel') {
+    if (message.content === '!channel') {
       let channelembed = new Discord.RichEmbed()
       .setTitle('Wanna Check out Wolfie Channel?')
       .setURL('https://www.youtube.com/c/Wolfkid')
