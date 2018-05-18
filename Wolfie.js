@@ -37,13 +37,17 @@ client.on('message', async message => {
       return message.channel.send(aboutembed);
     };
 
-    if (message.content === '!channel') {
-      let channelembed = new Discord.RichEmbed()
-      .setTitle('Wanna Check out Wolfie Channel?')
-      .setURL('https://www.youtube.com/c/Wolfkid')
+    if (message.content === '!media') {
+      let mediaembed = new Discord.RichEmbed()
+      .setTitle('This is Wolfie Social Media')
+      .setField('Is Youtube', ' Is Your is www.youtube.com/c/Wolfkid')
+      .setField('Is Twitter', 'Check out WolfKid (@TheRealWolfkid): https://twitter.com/TheRealWolfkid?s=09')
+      .setField('Is github', 'My Github is github.com/Wolfkid200444')
+      .setField('My  FanDiscord Server', 'bit.ly/WolfkidDiscord')
+      .setField('My Website', 'In Progress')
       .setColor('#FFFF00')
 
-      return message.channel.send(channelembed);
+      return message.channel.send(mediambed);
     };
 
     if (message.content === '!ver') {
@@ -51,10 +55,6 @@ client.on('message', async message => {
       .setTitle('Version')
       .setDescription('This bot was created on 11 May 2018 by using code with Discord.js!')
       .setField('Version', 'FWK-1.2')
-      .addField('Donate', 'https://paypal.me/wolfkid20044')
-      .addField('Owner', 'WolfKid200444')
-      .addField('Twitter', 'https://mobile.twitter.com/@TheRealWolfkid/')
-      .setColor('#FFFF08')
 
       return message.channel.send(verembed);
     };
