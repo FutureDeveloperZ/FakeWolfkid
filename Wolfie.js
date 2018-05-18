@@ -3,7 +3,7 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
     client.user.setStatus('dnd');
-    client.user.setActivity('My Self been Develop', {type: 'WATCHING'});
+    client.user.setActivity('How to Code!', {type: 'WATCHING'});
 });
 
 client.on('message', async message => {
@@ -14,7 +14,7 @@ client.on('message', async message => {
       .setTitle('ImpladeBot Commands List')
       .setDescription('There is available commands for this bot on list!')
       .addField('!help', 'Bot commands list!')
-      .addField('!ghostview', 'GhostView Plugin Info')
+      .addField('!channel', 'GhostView Plugin Info')
       .addField('!dcinvite', 'Join our developer team on Discord server!')
       .addField('!info', 'Bot Information')
       .addField('!github', 'FutureDevelopers Github Team!')
@@ -69,6 +69,12 @@ client.on('message', async message => {
       
       return message.channel.send(changelogembed);
     };
+    
+    if (message.content === '!github') {
+      let githubembed = new Discord.RichEmbed()
+      .setTitle('Out Github')
+      .setDescription('Check out our [github](github.com/FutureDeveloperz) to view all of our code or our repository')
+
 });
 
 client.login(process.env.BOT_TOKEN);
