@@ -74,7 +74,10 @@ client.on('message', async message => {
       let githubembed = new Discord.RichEmbed()
       .setTitle('Out Github')
       .setDescription('Check out our [github](github.com/FutureDeveloperz) to view all of our code or our repository')
-
+      .setColor('#000000')
+      
+      return message.channel.send(githubembed);
+    };
 });
 
 client.login(process.env.BOT_TOKEN);
