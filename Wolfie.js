@@ -14,7 +14,7 @@ client.on('message', async message => {
       .setTitle('ImpladeBot Commands List')
       .setDescription('There is available commands for this bot on list!')
       .addField('!help', 'Bot commands list!')
-      .addField('!channel', 'GhostView Plugin Info')
+      .addField('!channel', 'Creator Youtube Channel')
       .addField('!dcinvite', 'Join our developer team on Discord server!')
       .addField('!info', 'Bot Information')
       .addField('!github', 'FutureDevelopers Github Team!')
