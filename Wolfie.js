@@ -20,7 +20,8 @@ client.on('message', async message => {
       .addField('!dcinvite', 'Join our developer team on Discord server!')
       .addField('!info', 'Bot Information')
       .addField('!github', 'FutureDevelopers Github Team!')
-      .addField('!ver', 'Bot Server Status')
+      .addField('!changelog', 'View the New Updates that have bene made to the Bot!')
+      .addField('!ver', 'View What Version is the Bot in.')
       .setColor('#FFFF08')
       return message.channel.send(helpembed);
     };
