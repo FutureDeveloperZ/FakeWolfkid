@@ -11,18 +11,17 @@ client.on('message', async message => {
     if (message.author.bot) return;
     let prefix = config.prefix;
 
-    if (message.content === prefix + 'help') {
+    if (message.content === '!help') {
       let helpembed = new Discord.RichEmbed()
       .setTitle('Commands')
       .setDescription('There is available commands for this bot on list!')
       .addField('!help', 'Bot commands list!')
-      .addField('!channel', 'Creator Youtube Channel')
+      .addField('!channel', 'Creator YouTube Channel')
       .addField('!dcinvite', 'Join our developer team on Discord server!')
       .addField('!info', 'Bot Information')
       .addField('!github', 'FutureDevelopers Github Team!')
       .addField('!ver', 'Bot Server Status')
       .setColor('#FFFF08')
-
       return message.channel.send(helpembed);
     };
 
@@ -34,11 +33,10 @@ client.on('message', async message => {
       .addField('GitHub', 'https://github.com/FutureDeveloperZ/FakeWolfkid')
       .addField('Report Issues', 'https://github.com/FutureDeveloperZ/FakeWolfkid/issues')
       .setDescription('Join the Discord', 'http://bit.ly/FutureDevs')
-
       return message.channel.send(aboutembed);
     };
 
-    if (message.content === prefix + 'media') {
+    if (message.content === '!media') {
       let mediaembed = new Discord.RichEmbed()
       .setTitle('This is Wolfie Social Media')
       .setField('YouTube', 'https://www.youtube.com/c/Wolfkid')
@@ -55,11 +53,10 @@ client.on('message', async message => {
       .setTitle('Version')
       .setDescription('This bot was created on 11 May 2018 by using code with Discord.js!')
       .setField('Version', 'FWK-1.2 Unstable')
-
       return message.channel.send(verembed);
     };
 
-    if (message.content === prefix + 'changelog') {
+    if (message.content === '!changelog') {
       let changelogembed = new Discord.RichEmbed()
       .setTitle('Changelog')
       .setDescription('Check out Whats New on The Bot :D')
@@ -70,20 +67,20 @@ client.on('message', async message => {
       return message.channel.send(changelogembed);
     };
 
-    if (message.content ===  prefix + 'github') {
+    if (message.content === '!github') {
       let githubembed = new Discord.RichEmbed()
-      .setTitle('Check Out our GitHub')
+      .setTitle('Check out our GitHub')
       .setURL('https://github.com/FutureDeveloperZ/')
       .setDescription('Check out our GitHub to view all of our code or our repository.')
       .setColor('#000000')
       return message.channel.send(githubembed);
     };
 
-    if (message.content === prefix + 'dcinvite') {
+    if (message.content === '!dcinvite') {
       let dcinviteembed = new Discord.RichEmbed()
       .setTitle('Our Discord Invite')
-      .setURL('bit.ly/FutureDevs')
-      .setDecription('Check out our Discord server to get news of FakeWolfkid and if you have issues with the bot or not working property you can report it on #report or jn our Github')
+      .setURL('http://bit.ly/FutureDevs')
+      .setDecription('Check out our Discord server to get news of FakeWolfkid and if you have issues with the bot or not working property you can report it on #report or on our GitHub')
       return message.channel.send(dcinviteembed);
     };
 });
