@@ -5,13 +5,14 @@ const config = require('./config.json');
 client.on('ready', () => {
     client.user.setStatus('dnd');
     client.user.setActivity('How to Code!', {type: 'WATCHING'});
+    console.log('BOI I\'m ready!');
 });
 
 client.on('message', async message => {
     if (message.author.bot) return;
     let prefix = config.prefix;
 
-    if (message.content === '!help') {
+    if (message.content === prefix + 'help') {
       let helpembed = new Discord.RichEmbed()
       .setTitle('Commands')
       .setDescription('There is available commands for this bot on list!')
@@ -25,10 +26,10 @@ client.on('message', async message => {
       return message.channel.send(helpembed);
     };
 
-    if (message.content === '!about') {
+    if (message.content === prefix + 'about') {
       let aboutembed = new Discord.RichEmbed()
       .setTitle('Want to Know More About Me?')
-      .setDescription('Ok. Im a High Tech Bot That Can do a lot of Stuff Example tell you How many Members are in your Server or in Other Server My Code is a open source you can fine on github i can do more but is time to do other stuff.')
+      .setDescription('Ok. Im a High Tech Bot That Can do a lot of Stuff Example tell you How many Members are in your Server or in Other Server My Code is a open source you can fine on GutHub i can do more but is time to do other stuff.')
       .setColor('#FFFF00')
       .addField('GitHub', 'https://github.com/FutureDeveloperZ/FakeWolfkid')
       .addField('Report Issues', 'https://github.com/FutureDeveloperZ/FakeWolfkid/issues')
@@ -36,27 +37,27 @@ client.on('message', async message => {
       return message.channel.send(aboutembed);
     };
 
-    if (message.content === '!media') {
+    if (message.content === prefix + 'media') {
       let mediaembed = new Discord.RichEmbed()
       .setTitle('This is Wolfie Social Media')
-      .setField('YouTube', 'https://www.youtube.com/c/Wolfkid')
-      .setField('Twitter', 'https://twitter.com/TheRealWolfkid')
-      .setField('GitHub', 'https://github.com/Wolfkid200444')
-      .setField('Fan Discord Server', 'http://bit.ly/WolfkidDiscord')
-      .setField('Website', 'In Progress')
+      .addField('YouTube', 'https://www.youtube.com/c/Wolfkid')
+      .addField('Twitter', 'https://twitter.com/TheRealWolfkid')
+      .addField('GitHub', 'https://github.com/Wolfkid200444')
+      .addField('Fan Discord Server', 'http://bit.ly/WolfkidDiscord')
+      .addField('Website', 'In Progress')
       .setColor('#FFFF00')
-      return message.channel.send(mediambed);
+      return message.channel.send(mediaembed);
     };
 
-    if (message.content === '!ver') {
+    if (message.content === prefix + 'ver') {
       let verembed = new Discord.RichEmbed()
       .setTitle('Version')
       .setDescription('This bot was created on 11 May 2018 by using code with Discord.js!')
-      .setField('Version', 'FWK-1.2 Unstable')
+      .addField('Version', 'FWK-1.2 Unstable')
       return message.channel.send(verembed);
     };
 
-    if (message.content === '!changelog') {
+    if (message.content === prefix + 'changelog') {
       let changelogembed = new Discord.RichEmbed()
       .setTitle('Changelog')
       .setDescription('Check out Whats New on The Bot :D')
@@ -67,7 +68,7 @@ client.on('message', async message => {
       return message.channel.send(changelogembed);
     };
 
-    if (message.content === '!github') {
+    if (message.content === prefix + 'github') {
       let githubembed = new Discord.RichEmbed()
       .setTitle('Check out our GitHub')
       .setURL('https://github.com/FutureDeveloperZ/')
@@ -80,7 +81,7 @@ client.on('message', async message => {
       let dcinviteembed = new Discord.RichEmbed()
       .setTitle('Our Discord Invite')
       .setURL('http://bit.ly/FutureDevs')
-      .setDecription('Check out our Discord server to get news of FakeWolfkid and if you have issues with the bot or not working property you can report it on #report or on our GitHub')
+      .setDescription('Check out our Discord server to get news of FakeWolfkid and if you have issues with the bot or not working property you can report it on #report or on our GitHub')
       return message.channel.send(dcinviteembed);
     };
 });
