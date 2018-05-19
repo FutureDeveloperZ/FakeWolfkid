@@ -78,7 +78,7 @@ client.on('message', async message => {
       return message.channel.send(githubembed);
     };
 
-    if (message.content === '!dcinvite') {
+    if (message.content === prefix + 'dcinvite') {
       let dcinviteembed = new Discord.RichEmbed()
       .setTitle('Our Discord Invite')
       .setURL('http://bit.ly/FutureDevs')
