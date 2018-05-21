@@ -4,7 +4,7 @@ const config = require('./config.json');
 
 client.on('ready', () => {
     client.user.setStatus('dnd');
-    client.user.setActivity('Implade Sucks!', {type: 'WATCHING'});
+    client.user.setActivity('We Love !', {type: 'WATCHING'});
     console.log('BOI I\'m ready!');
 });
 
