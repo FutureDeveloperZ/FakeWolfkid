@@ -86,7 +86,7 @@ client.on('message', async message => {
       return message.channel.send(dcinviteembed);
     };
     
-    if (command === "lewd") {
+    if (message.content === prefix + 'lewd') {
 
         message.delete().catch(O_o=>{});
 
