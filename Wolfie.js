@@ -85,30 +85,5 @@ client.on('message', async message => {
       .setDescription('Check out our Discord server to get news of FakeWolfkid and if you have issues with the bot or not working property you can report it on #report or on our GitHub')
       return message.channel.send(dcinviteembed);
     };
-    
-    if (message.content === prefix + 'lewd') {
-
-        message.delete().catch(O_o=>{});
-
-        let {body} = await superagent
-
-        .get(https://nekos.life/api/lewd/neko);
-
-        if (!message.channel.nsfw) return message.reply("This command is prohibited outside of NSFW channels.");
-
-        let hentaiEmbed = new Discord.RichEmbed()
-
-        .setColor("#ff9900")
-
-        .setTitle("Here is your image!")
-
-        .setImage(body.neko)
-
-        .setFooter(Requested by ${message.author.tag});
-
-        message.channel.send(hentaiEmbed);
-
-    };
-});
-
+ });
 client.login(process.env.BOT_TOKEN);
