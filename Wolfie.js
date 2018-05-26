@@ -91,7 +91,7 @@ client.on('message', async message => {
       return message.channel.send(dcinviteembed);
     };
     
-   if (message.content === prefix + 'avatar <@!${client.user.id}>') {
+   if (message.content === prefix + 'avatar') {
      let avatarembed = new Discord.RichEmbed()
      .setTitle('Avatar!')
      .setColor('RANDOM')
