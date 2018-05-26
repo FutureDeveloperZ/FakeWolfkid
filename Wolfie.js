@@ -4,7 +4,7 @@ const config = require('./config.json');
 
 client.on('ready', () => {
     client.user.setStatus('dnd');
-    client.user.setActivity('Neko Lewds!?!', {type: 'WATCHING'});
+    client.user.setActivity('Avatars!!', {type: 'WATCHING'});
     console.log('BOI I\'m ready!');
 });
 
@@ -91,7 +91,7 @@ client.on('message', async message => {
      let avatarembed = new Discord.RichEmbed()
      .setTitle('Avatar!')
      .setColor('RANDOM')
-     .setField(message.author.avatarURL, `${message.author.tag}`)
+     .setField(message.author.avatarURL, '${message.author.tag}')
      return message.channel.send(avatarembed);
    };
 });
