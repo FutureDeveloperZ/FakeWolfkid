@@ -26,7 +26,7 @@ client.on('message', async message => {
       .setColor('#FFFF08')
       .setFooter(`Requested by ${message.author.tag} | Help page 1`)
       return message.channel.send(helpembed);
-    };
+    }
 
     if (message.content === prefix + 'about') {
       let aboutembed = new Discord.RichEmbed()
@@ -37,7 +37,7 @@ client.on('message', async message => {
       .addField('Report Issues', 'https://github.com/FutureDeveloperZ/FakeWolfkid/issues')
       .setDescription('Join the Discord', 'http://bit.ly/FutureDevs')
       return message.channel.send(aboutembed);
-    };
+    }
 
     if (message.content === prefix + 'media') {
       let mediaembed = new Discord.RichEmbed()
@@ -49,7 +49,7 @@ client.on('message', async message => {
       .addField('Website', 'In Progress')
       .setColor('#FFFF00')
       return message.channel.send(mediaembed);
-    };
+    }
 
     if (message.content === prefix + 'botinfo') {
       let bicon = bot.user.displayAvatarURL;
@@ -61,7 +61,7 @@ client.on('message', async message => {
       .addField('Bot Created', bot.user.createdAt)
       .addField('Bot Username', bot.user.username)
       return message.channel.send(botinfoembed);
-    };
+    }
 
     if (message.content === prefix + 'changelog') {
       let changelogembed = new Discord.RichEmbed()
@@ -72,7 +72,7 @@ client.on('message', async message => {
       .addField('May 18 2018 News', 'Added Help Command And Few Commands Working again')
       .setColor('#808000')
       return message.channel.send(changelogembed);
-    };
+    }
 
     if (message.content === prefix + 'github') {
       let githubembed = new Discord.RichEmbed()
@@ -81,7 +81,7 @@ client.on('message', async message => {
       .setDescription('Check out our GitHub to view all of our code or our repository.')
       .setColor('#000000')
       return message.channel.send(githubembed);
-    };
+    }
 
     if (message.content === prefix + 'dcinvite') {
       let dcinviteembed = new Discord.RichEmbed()
@@ -89,7 +89,7 @@ client.on('message', async message => {
       .setURL('http://bit.ly/FutureDevs')
       .setDescription('Check out our Discord server to get news of FakeWolfkid and if you have issues with the bot or not working property you can report it on #report or on our GitHub')
       return message.channel.send(dcinviteembed);
-    };
+    }
     
    if (message.content === prefix + 'avatar') {
      let avatarembed = new Discord.RichEmbed()
@@ -98,7 +98,7 @@ client.on('message', async message => {
      .setImage(message.author.avatarURL + "?size=2048") 
      .setFooter(`Requested by ${message.author.tag}`)
      return message.channel.send(avatarembed)
-   };
+   }
 
 });
 client.login(process.env.BOT_TOKEN);
