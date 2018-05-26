@@ -95,7 +95,7 @@ client.on('message', async message => {
      let avatarembed = new Discord.RichEmbed()
      .setTitle('Avatar!')
      .setColor('RANDOM')
-     .setField('message.author.avatarURL', '${message.author.tag}')
+     .setImage(message.author.avatarURL + "?size=2048") 
      return message.channel.send(avatarembed)
    };
 
