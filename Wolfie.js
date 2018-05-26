@@ -52,12 +52,12 @@ client.on('message', async message => {
     }
 
     if (message.content === prefix + 'botinfo') {
-      let bicon = bot.user.displayAvatarURL;
+
       let botinfoembed = new Discord.RichEmbed()
       .setTitle('BotInfo')
       .setDescription('Here is were you can find About the Bot Info!')
       .addField('Version', 'FWK-1.2 Unstable')
-      .setImage(bot.avatarURL)
+      .setImage(bot.user.avatarURL)
       .addField('Bot Created', bot.user.createdAt)
       .addField('Bot Username', bot.user.username)
       return message.channel.send(botinfoembed);
