@@ -96,6 +96,7 @@ client.on('message', async message => {
      .setTitle('Avatar!')
      .setColor('RANDOM')
      .setImage(message.author.avatarURL + "?size=2048") 
+     .setFooter(`Requested by ${message.author.tag}`)
      return message.channel.send(avatarembed)
    };
 
