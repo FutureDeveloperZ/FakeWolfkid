@@ -85,11 +85,12 @@ client.on('message', async message => {
       .setDescription('Check out our Discord server to get news of FakeWolfkid and if you have issues with the bot or not working property you can report it on #report or on our GitHub')
       return message.channel.send(dcinviteembed);
     };
-   if (message.content === prefix + 'avatr') {
+    
+   if (message.content === prefix + 'avatar') {
      let avatarembed = new Discord.RichEmbed()
      .setTitle('Avatar!')
      .setColor('RANDOM')
-     .setField(message.author.avatarURL, `${message.author.tag}`)
+     .setField(message.author.avatarURL, '${message.author.tag}')
      return message.channel.send(avatarembed);
    };
 });
