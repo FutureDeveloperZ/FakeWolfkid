@@ -96,7 +96,7 @@ client.on('message', async message => {
      .setTitle('Avatar!')
      .setColor('RANDOM')
      .setField('message.author.avatarURL', '${message.author.tag}')
-ed);
+     return message.channel.send(avatarembed)
    };
 
 });
