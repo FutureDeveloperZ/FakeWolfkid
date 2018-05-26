@@ -51,12 +51,15 @@ client.on('message', async message => {
       return message.channel.send(mediaembed);
     };
 
-    if (message.content === prefix + 'ver') {
-      let verembed = new Discord.RichEmbed()
-      .setTitle('Version')
-      .setDescription('This bot was created on 11 May 2018 by using code with Discord.js!')
+    if (message.content === prefix + 'botinfo') {
+      let bicon = bot.user.displayAvatarURL;
+      let botinfoembed = new Discord.RichEmbed()
+      .setTitle('BotInfo')
+      .setDescription('Here is were you can find About the Bot Info!')
       .addField('Version', 'FWK-1.2 Unstable')
-      return message.channel.send(verembed);
+      .addField('Bot Created', bot.user.createdAt)
+      .addField('Bot Username', bot.user.username)
+      return message.channel.send(botinfoembed);
     };
 
     if (message.content === prefix + 'changelog') {
