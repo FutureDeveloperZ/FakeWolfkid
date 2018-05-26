@@ -57,7 +57,7 @@ client.on('message', async message => {
       .setTitle('BotInfo')
       .setDescription('Here is were you can find About the Bot Info!')
       .addField('Version', 'FWK-1.2 Unstable')
-      .addThumnail(bicon)
+      .setImage(bot.avatarURL)
       .addField('Bot Created', bot.user.createdAt)
       .addField('Bot Username', bot.user.username)
       return message.channel.send(botinfoembed);
@@ -91,7 +91,7 @@ client.on('message', async message => {
       return message.channel.send(dcinviteembed);
     };
     
-   if (message.content === prefix + 'avatar') {
+   if (message.content === prefix + 'avatar <@!${client.user.id}>') {
      let avatarembed = new Discord.RichEmbed()
      .setTitle('Avatar!')
      .setColor('RANDOM')
