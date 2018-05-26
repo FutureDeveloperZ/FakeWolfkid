@@ -17,13 +17,14 @@ client.on('message', async message => {
       .setTitle('Commands')
       .setDescription('There is available commands for this bot on list!')
       .addField('!help', 'Bot commands list!')
-      .addField('!media', 'Creator YouTube Channel')
+      .addField('!media', 'Check The Bot Creator Website/Media')
       .addField('!dcinvite', 'Join our developer team on Discord server!')
       .addField('!info', 'Bot Information')
       .addField('!github', 'FutureDevelopers Github Team!')
       .addField('!changelog', 'View the New Updates that have bene made to the Bot!')
       .addField('!ver', 'View What Version is the Bot in.')
       .setColor('#FFFF08')
+      .setFooter(`Requested by ${message.author.tag} | Help page 1`)
       return message.channel.send(helpembed);
     };
 
@@ -90,7 +91,7 @@ client.on('message', async message => {
      let avatarembed = new Discord.RichEmbed()
      .setTitle('Avatar!')
      .setColor('RANDOM')
-     .setField(message.author.avatarURL, '${message.author.tag}')
+     .setField(message.author.avatarURL, `${message.author.tag}`)
      return message.channel.send(avatarembed);
    };
 });
