@@ -4,7 +4,7 @@ const config = require('./config.json');
 
 client.on('ready', () => {
     client.user.setStatus('dnd');
-    client.user.setActivity('Avatars!!', {type: 'WATCHING'});
+    client.user.setActivity('Neko Lewds', {type: 'WATCHING'});
     console.log('BOI I\'m ready!');
 });
 
@@ -98,6 +98,30 @@ client.on('message', async message => {
      .setImage(message.author.avatarURL + "?size=2048") 
      .setFooter(`Requested by ${message.author.tag}`)
      return message.channel.send(avatarembed)
+   }
+    
+    if (command === "lewd") {
+
+       message.delete().catch(O_o=>{});
+
+       let {body} = await superagent
+
+       .get(https://nekos.life/api/lewd/neko);
+
+       if (!message.channel.nsfw) return message.reply("This command is prohibited outside of NSFW channels.");
+
+       let hentaiEmbed = new Discord.RichEmbed()
+
+       .setColor("#00FF00")
+
+       .setTitle("Here is your image!")
+
+       .setImage(body.neko)
+
+       .setFooter(Requested by ${message.author.tag});
+
+       return message.channel.send(hentaiEmbed);
+
    }
 
 });
