@@ -111,6 +111,7 @@ client.on('message', async message => {
            .setColor('RANDOM')
            .setImage(body.neko)
            .setFooter(`Requested By ${message.author.tag}`)
-           return message.channel.send(hentaiembed)
+        return message.channel.send(hentaiembed);
+      }
 });
 client.login(process.env.BOT_TOKEN);
