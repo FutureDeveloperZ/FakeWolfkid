@@ -14,16 +14,16 @@ client.on('message', async message => {
 
     if (message.content === prefix + 'help') {
       let helpembed = new Discord.RichEmbed()
-      .setTitle('Commands')
+      .setTitle('Simple Comamnds | prefix ! ')
       .setDescription('There is available commands for this bot on list!')
-      .addField('!help', 'Bot commands list!')
-      .addField('!media', 'Check The Bot Creator Website/Media')
-      .addField('!dcinvite', 'Join our developer team on Discord server!')
-      .addField('!info', 'Bot Information')
-      .addField('!github', 'FutureDevelopers Github Team!')
-      .addField('!changelog', 'View the New Updates that have bene made to the Bot!')
-      .addField('!botinfo', 'View What Version is the bot and ')
-      .setColor('#FFFF08')
+      .addField('help', 'Bot commands list!')
+      .addField('media', 'Check The Bot Creator Website/Media')
+      .addField('dcinvite', 'Join our developer team on Discord server!')
+      .addField('info', 'Bot Information')
+      .addField('avatar', 'FutureDevelopers Github Team!')
+      .addField('changelog', 'View the New Updates that have bene made to the Bot!')
+      .addField('botinfo', 'View What Version is the bot and ')
+      .setColor('RANDOM')
       .setFooter(`Requested by ${message.author.tag} | Help page 1`)
       return message.channel.send(helpembed);
     }
@@ -115,4 +115,5 @@ client.on('message', async message => {
     
 
 });
+
 client.login(process.env.BOT_TOKEN);
