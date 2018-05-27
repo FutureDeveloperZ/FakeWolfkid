@@ -19,18 +19,20 @@ client.on('message', async message => {
       .addField('help', 'Bot commands list!')
       .addField('media', 'Check The Bot Creator Website/Media')
       .addField('dcinvite', 'Join our developer team on Discord server!')
-      .addField('info', 'Bot Information')
-      .addField('avatar', 'FutureDevelopers Github Team!')
+      .addField('info', 'Info about the Guild')
+      .addField('avatar', 'See your profile picture But Bigger')
       .addField('changelog', 'View the New Updates that have bene made to the Bot!')
-      .addField('botinfo', 'View What Version is the bot and ')
+      .addField('botinfo', 'VIEW Bof Information and Versions')
       .setColor('RANDOM')
       .setFooter(`Requested by ${message.author.tag} | Help page 1`)
       return message.channel.send(helpembed);
     }
 
-    if (message.content === prefix + 'about') {
+    if (message.content === prefix + 'info') {
       let aboutembed = new Discord.RichEmbed()
-      .setTitle('Want to Know More About Me?')
+      .setFooter(`Do it JUST do IT ${message.author.tag}`)
+
+      .setTitle('Want More Info About the Server?')
       .setDescription('Ok. Im a High Tech Bot That Can do a lot of Stuff Example tell you How many Members are in your Server or in Other Server My Code is a open source you can fine on GutHub i can do more but is time to do other stuff.')
       .setColor('#FFFF00')
       .addField('GitHub', 'https://github.com/FutureDeveloperZ/FakeWolfkid')
