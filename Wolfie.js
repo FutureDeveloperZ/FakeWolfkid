@@ -102,7 +102,7 @@ client.on('message', async message => {
     
     if (message.content === prefix + 'lewd')
          message.delete.catch(O_o=>{});
-      let {body}=await supreagent
+      let {body}=await superagent
       .get(nekos.life/api/lewd/neko);
     if (!message.channel.nsfw) return message.reply("What are you doing? Go on a NsFW Channel!")
         
@@ -112,7 +112,7 @@ client.on('message', async message => {
       .setImage(body.neko)
       .setFooter(`Requested By ${message.author.tag}`)
       return message.channel.send(hentaiembed);
-    };
+    }
 
 });
 client.login(process.env.BOT_TOKEN);
