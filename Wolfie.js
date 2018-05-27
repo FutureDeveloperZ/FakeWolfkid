@@ -103,7 +103,7 @@ client.on('message', async message => {
     if (message.content === prefix + 'lewd')
          message.delete.catch(O_o=>{});
       let {body}=await supreagent
-      .get(https://nekos.life/api/lewd/neko);
+      .get(nekos.life/api/lewd/neko);
     if (!message.channel.nsfw) return message reply("What are you doing? Go on a NsFW Channel!")
         
       let hentaiembed = new Discord.RichEmbed()
