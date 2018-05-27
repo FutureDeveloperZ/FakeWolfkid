@@ -22,7 +22,7 @@ client.on('message', async message => {
       .addField('!info', 'Bot Information')
       .addField('!github', 'FutureDevelopers Github Team!')
       .addField('!changelog', 'View the New Updates that have bene made to the Bot!')
-      .addField('!ver', 'View What Version is the Bot in.')
+      .addField('!botinfo', 'View What Version is the bot and ')
       .setColor('#FFFF08')
       .setFooter(`Requested by ${message.author.tag} | Help page 1`)
       return message.channel.send(helpembed);
