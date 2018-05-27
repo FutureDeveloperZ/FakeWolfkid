@@ -99,28 +99,18 @@ client.on('message', async message => {
      .setFooter(`Requested by ${message.author.tag}`)
      return message.channel.send(avatarembed)
    }
-
-    if (message.content === prefix + 'lewd') {
-
-        message.delete().catch(O_o=>{});
-
-        let {body} = await superagent
-
-        .get(https://nekos.life/api/lewd/neko);
-
-        if (!message.channel.nsfw) return message.reply("This command is prohibited outside of NSFW channels.");
-
-        let hentaiEmbed = new Discord.RichEmbed()
-
-        .setColor("#00FF00")
-
-        .setTitle("Here is your image!")
-
-        .setImage(body.neko)
-
-        .setFooter(Requested by ${message.author.tag});
-
-        return message.channel.send(hentaiEmbed);
-      }
+    
+    if (message.content === prefix + 'lewd')
+         message.delete().catch(O_o=>);
+         let {body}=await supreagent
+         .get(https://nekos.life/api/lewd/neko);
+         if (!message.channel.nsfw) return message reply("What are you doing? Go on a NsFW Channel!")
+        
+           let hentaiembed = new Discord.RichEmbed()
+           .setTitle('Heres Your Lewds')
+           .setColor('RANDOM')
+           .setImage(body.neko)
+           .setFooter(`Requested By ${message.author.tag}`)
+           return message.channel.send(hentaiembed)
 });
 client.login(process.env.BOT_TOKEN);
