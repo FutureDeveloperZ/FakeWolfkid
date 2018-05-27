@@ -101,9 +101,9 @@ client.on('message', async message => {
    }
     
     if (message.content === prefix + 'lewd')
-         message.delete.catch(O_o=>{});
+         message.delete().catch(O_o=>{});
       let {body}=await superagent
-      .get(nekos.life/api/lewd/neko);
+      .get("https://nekos.life/api/lewd/neko");
     if (!message.channel.nsfw) return message.reply("What are you doing? Go on a NsFW Channel!")
         
       let hentaiembed = new Discord.RichEmbed()
@@ -112,7 +112,7 @@ client.on('message', async message => {
       .setImage(body.neko)
       .setFooter(`Requested By ${message.author.tag}`)
       return message.channel.send(hentaiembed);
-  
+    }
 
 });
 client.login(process.env.BOT_TOKEN);
