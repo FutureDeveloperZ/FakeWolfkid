@@ -4,7 +4,7 @@ const config = require('./config.json');
 
 client.on('ready', () => {
     client.user.setStatus('dnd');
-    client.user.setActivity('Neko Lewds!!!', {type: 'WATCHING'});
+    client.user.setActivity('Let Me Work Ok!!', {type: 'WATCHING'});
     console.log('BOI I\'m ready!');
 });
 
@@ -19,7 +19,7 @@ client.on('message', async message => {
       .addField('help', 'Bot commands list!')
       .addField('media', 'Check The Bot Creator Website/Media')
       .addField('dcinvite', 'Join our developer team on Discord server!')
-      .addField('info', 'Info about the Guild')
+      .addField('serverinfo', 'Info about the server')
       .addField('avatar', 'See your profile picture But Bigger')
       .addField('changelog', 'View the New Updates that have bene made to the Bot!')
       .addField('botinfo', 'VIEW Bof Information and Versions')
@@ -27,20 +27,7 @@ client.on('message', async message => {
       .setFooter(`Requested by ${message.author.tag} | Help page 1`)
       return message.channel.send(helpembed);
     }
-
-    if (message.content === prefix + 'info') {
-      let aboutembed = new Discord.RichEmbed()
-      .setFooter(`Do it JUST do IT ${message.author.tag}`)
-
-      .setTitle('Want More Info About the Server?')
-      .setDescription('Ok. Im a High Tech Bot That Can do a lot of Stuff Example tell you How many Members are in your Server or in Other Server My Code is a open source you can fine on GutHub i can do more but is time to do other stuff.')
-      .setColor('#FFFF00')
-      .addField('GitHub', 'https://github.com/FutureDeveloperZ/FakeWolfkid')
-      .addField('Report Issues', 'https://github.com/FutureDeveloperZ/FakeWolfkid/issues')
-      .setDescription('Join the Discord', 'http://bit.ly/FutureDevs')
-      return message.channel.send(aboutembed);
-    }
-
+    
     if (message.content === prefix + 'media') {
       let mediaembed = new Discord.RichEmbed()
       .setTitle('This is Wolfie Social Media')
@@ -49,7 +36,7 @@ client.on('message', async message => {
       .addField('GitHub', 'https://github.com/Wolfkid200444')
       .addField('Fan Discord Server', 'http://bit.ly/WolfkidDiscord')
       .addField('Website', 'In Progress')
-      .setColor('#FFFF00')
+      .setColor('RANDOM')
       return message.channel.send(mediaembed);
     }
 
@@ -61,7 +48,7 @@ client.on('message', async message => {
       .addField('Version', 'FWK-1.2 Unstable')
       .setImage(bot.user.avatarURL)
       .addField('Bot Created', bot.user.createdAt)
-      .addField('Bot Username', bot.user.username)
+	      .addField('Bot Username', bot.user.username)
       return message.channel.send(botinfoembed);
     }
 
@@ -73,20 +60,12 @@ client.on('message', async message => {
       .addField('May 14 2018 News Huge Update', 'Added Embeds To Commands And Alot')
       .addField('May 18 2018 News', 'Added Help Command And Few Commands Working again')
       .addField('May 27 2018 News', 'Added Footers to Commands and Avatar Command')
+      .addField('May 30 2018 News', 'Remove Lewd Command as i bring alot of problems plus Adding Commands')
       .setColor('#808000')
       .setFooter(`Requested by ${message.author.tag}`)
       return message.channel.send(changelogembed);
     }
-
-    if (message.content === prefix + 'github') {
-      let githubembed = new Discord.RichEmbed()
-      .setTitle('Check out our GitHub')
-      .setURL('https://github.com/FutureDeveloperZ/')
-      .setDescription('Check out our GitHub to view all of our code or our repository.')
-      .setColor('#000000')
-      return message.channel.send(githubembed);
-    }
-
+    
     if (message.content === prefix + 'dcinvite') {
       let dcinviteembed = new Discord.RichEmbed()
       .setTitle('Click Here to Our Discord Invite')
@@ -99,11 +78,10 @@ client.on('message', async message => {
      let avatarembed = new Discord.RichEmbed()
      .setTitle('Avatar!')
      .setColor('RANDOM')
-     .setImage(message.author.avatarURL + "?size=2048") 
+     .setImage(message.author.avatarURL + "?size=0") 
      .setFooter(`Requested by ${message.author.tag}`)
      return message.channel.send(avatarembed)
    }
    
 });
-
 client.login(process.env.BOT_TOKEN);
