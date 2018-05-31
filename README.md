@@ -8,12 +8,12 @@ This bot is still in beta.
 - [x] Check To-do list Everyday
 - [x] Rewrite All The Commands And Files
 - [x] Make it Work
-- [ ] Learn how to Code
+- [x] Learn how to Code
 - [X] Fix The Bot Code
 - [X] Make Embed Commands
 - [ ]  Make it Public
 - [X] Out pass my Friends Bots
-- [ ] Learn proper grammar
+- [x] Learn proper grammar
 
 ## Social Media
 Want to Help me to Code with me? <br>
