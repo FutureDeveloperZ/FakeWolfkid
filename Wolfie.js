@@ -4,8 +4,8 @@ const config = require('./config.json');
 
 client.on('ready', () => {
     client.user.setStatus('dnd');
-    client.user.setActivity('Let Me Work Ok!!', {type: 'WATCHING'});
-    console.log('BOI I\'m ready!');
+    client.user.setActivity('My Self | --> b; <--', {type: 'WATCHING'});
+    console.log('Uhhh I\'m ready!');
 });
 
 client.on('message', async message => {
@@ -39,19 +39,18 @@ client.on('message', async message => {
       .setColor('RANDOM')
       return message.channel.send(mediaembed);
     }
-
+    
     if (message.content === prefix + 'botinfo') {
-
       let botinfoembed = new Discord.RichEmbed()
       .setTitle('BotInfo')
       .setDescription('Here is were you can find About the Bot Info!')
       .addField('Version', 'FWK-1.2 Unstable')
-      .setImage(bot.user.avatarURL)
-      .addField('Bot Created', bot.user.createdAt)
-	      .addField('Bot Username', bot.user.username)
+      .setImage(client.user.avatarURL)
+      .addField('Bot Created', client.user.createdAt)
+	     .addField('Bot Username', client.user.username)
       return message.channel.send(botinfoembed);
     }
-
+    
     if (message.content === prefix + 'changelog') {
       let changelogembed = new Discord.RichEmbed()
       .setTitle('Changelog')
@@ -59,8 +58,9 @@ client.on('message', async message => {
       .addField('May 11 2018 News', 'Code Added')
       .addField('May 14 2018 News Huge Update', 'Added Embeds To Commands And Alot')
       .addField('May 18 2018 News', 'Added Help Command And Few Commands Working again')
-      .addField('May 27 2018 News', 'Added Footers to Commands and Avatar Command')
+      .addField('May 27 2018 News', 'Added Footers to #ffffffffCommands and Avatar Command')
       .addField('May 30 2018 News', 'Remove Lewd Command as i bring alot of problems plus Adding Commands')
+      .addField('June 4 2018 News', 'Added BotInfo Command )
       .setColor('#808000')
       .setFooter(`Requested by ${message.author.tag}`)
       return message.channel.send(changelogembed);
@@ -76,9 +76,9 @@ client.on('message', async message => {
     
    if (message.content === prefix + 'avatar') {
      let avatarembed = new Discord.RichEmbed()
-     .setTitle('Avatar!')
+     .setTitle('Your Avatar!')
      .setColor('RANDOM')
-     .setImage(message.author.avatarURL + "?size=0") 
+     .setImage(message.author.avatarURL) 
      .setFooter(`Requested by ${message.author.tag}`)
      return message.channel.send(avatarembed)
    }
