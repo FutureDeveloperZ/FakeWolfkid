@@ -60,8 +60,8 @@ client.on('message', async message => {
       .addField('May 18 2018 News', 'Added Help Command And Few Commands Working again')
       .addField('May 27 2018 News', 'Added Footers to #ffffffffCommands and Avatar Command')
       .addField('May 30 2018 News', 'Remove Lewd Command as i bring alot of problems plus Adding Commands')
-      .addField('June 4 2018 News', 'Added BotInfo Command )
-      .setColor('#808000')
+      .addField('June 4 2018 News', 'Added BotInfo Command')
+      .setColor('BLACK')
       .setFooter(`Requested by ${message.author.tag}`)
       return message.channel.send(changelogembed);
     }
