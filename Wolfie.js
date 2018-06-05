@@ -48,7 +48,7 @@ client.on('message', async message => {
       .setImage(client.user.avatarURL)
       .addField('Bot Created', client.user.createdAt)
       .addField('Bot Username', client.user.username)
-      .setFooter(`Owner Wolfie#
+      .setFooter(`Owner Wolfie#7213 | Requested By ${message.author.tag}`)
       return message.channel.send(botinfoembed);
     }
     
