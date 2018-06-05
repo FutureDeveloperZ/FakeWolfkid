@@ -4,7 +4,7 @@ const config = require('./config.json');
 
 client.on('ready', () => {
     client.user.setStatus('dnd');
-    client.user.setActivity('My Self | --> b; <--', {type: 'WATCHING'});
+    client.user.setActivity('Matching stuff| --> f; <--', {type: 'WATCHING'});
     console.log('Uhhh I\'m ready!');
 });
 
@@ -44,10 +44,11 @@ client.on('message', async message => {
       let botinfoembed = new Discord.RichEmbed()
       .setTitle('BotInfo')
       .setDescription('Here is were you can find About the Bot Info!')
-      .addField('Version', 'FWK-1.2 Unstable')
+      .addField('Version', 'FWK-1.5 stable')
       .setImage(client.user.avatarURL)
       .addField('Bot Created', client.user.createdAt)
-	     .addField('Bot Username', client.user.username)
+      .addField('Bot Username', client.user.username)
+      .setFooter(`Owner Wolfie#
       return message.channel.send(botinfoembed);
     }
     
