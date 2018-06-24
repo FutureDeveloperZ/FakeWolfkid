@@ -4,7 +4,7 @@ const config = require('./config.json');
 
 client.on('ready', () => {
     client.user.setStatus('dnd');
-    client.user.setActivity('New Update | --> f; <--', {type: 'WATCHING'});
+    client.user.setActivity('My Self | --> f; <--', {type: 'WATCHING'});
     console.log('Uhhh I\'m ready!');
 });
 
@@ -12,30 +12,33 @@ client.on('message', async message => {
     if (message.author.bot) return;
     let prefix = config.prefix;
 
-    if (message.content === prefix + 'help') {
+    if (message.content === prefix + 'help') {
       let helpembed = new Discord.RichEmbed()
-      .setTitle('Simple Comamnds | prefix f; | Page 1 ')
+      .setTitle('List Of Commands | prefix f; | Help List ')
       .setDescription('There is available commands for this bot on list!')
-      .addField('help', 'Bot commands list! (Theres 1 to 2 pages)')
-      .addField('media', 'Check The Bot Creator Website/Media')
-      .addField('dcinvite', 'Join our developer team on Discord server!')
-      .addField('userinfo', 'Info about the about you or others')
-      .addField('avatar', 'See your profile picture But Bigger')
-      .addField('changelog', 'View the New Updates that have bene made to the Bot!')
-      .addField('botinfo', 'check Bot Information and Versions')
+      .addField(':newspaper: INFO', '7 Commands open \n``help info``')
+      .addField(':tada: FUN', '1 Commands open \n``help fun``)
       .setColor('RANDOM')
-      .setFooter(`Requested by ${message.author.tag} | Help page 1`)
+      .setFooter(`Requested by ${message.author.tag} | Help list`)
       return message.channel.send(helpembed);
     }
-    
-    if (message.content === prefix + 'help2') {
-      let helpe2mbed = new Discord.RichEmbed()
-      .setTitle('Simple Comamnds | prefix f; | Page 2 ')
-      .setDescription('2 Page of Help')
-      .addField('Host', 'Check out our new Host')
+  
+    if (message.content === prefix + 'help info') {
+      let helpeinfombed = new Discord.RichEmbed()
+      .setTitle('Info commands | prefix f; | Info page ')
+      .setDescription('There is available commands for this Info \n``botinfo, changelog, dcinvite, media, userinfo, host``')
       .setColor('RANDOM')
-      .setFooter(`Requested by ${message.author.tag} | Help page 2`)
-      return message.channel.send(helpe2mbed);
+      .setFooter(`Requested by ${message.author.tag} | Help info`)
+      return message.channel.send(helpeinfombed);
+    }
+      
+    if (message.content === prefix + 'help fun') {
+      let helpfunembed = new Discord.RichEmbed()
+      .setTitle('Fun Comamnds | prefix f; | Fun list')
+      .setDescription('There is available commands for FUN!\n ``avatar,``')
+      .setColor('RANDOM')
+      .setFooter(`Requested by ${message.author.tag} | Help fun`)
+      return message.channel.send(helpfunembed);
     }
     
     if (message.content === prefix + 'media') {
@@ -50,16 +53,18 @@ client.on('message', async message => {
       let botinfoembed = new Discord.RichEmbed()
       .setTitle('BotInfo')
       .setDescription('Here is were you can find About the Bot Info!')
-      .addField('Version', '1.3 Unstable')
+      .addField('Version', '1.4 Stable')
       .setThumbnail(client.user.avatarURL)
       .addField('Bot Created', client.user.createdAt)
       .addField('Bot Username', client.user.username)
       .addField('Host We Use', 'Heroku')
-      .addField('Bot Code', 'This Bot used Node.js and d.js Modules')
-      .addField('Contributors + Helpers', 'People that Help me with the bot and co : Cheitroid#2928, Zyphen#8624, shadowolf#9212, PokemonLeader#1712')
+      .addField('Bot Code', 'JavaScript')
+      .addField('Librarys', ' discord.js')
+      .addField('Modules', 'Node.js')
+      .addField('Contributors + Helpers', 'People that Help me with the bot and contributors : Cheitroid#2928, Zyphen#8624, shadowolf#9212, PokemonLeader#1712')
       return message.channel.send(botinfoembed);
     }
-    
+   
     if (message.content === prefix + 'changelog') {
       let changelogembed = new Discord.RichEmbed()
       .setTitle('Changelog')
@@ -71,6 +76,7 @@ client.on('message', async message => {
       .addField('May 30 2018 News', 'Remove Lewd Command as i bring alot of problems plus Adding Commands')
       .addField('June 7 2018 News', 'Added Some awsome commands(do f; or b; for help) and Fix Descriptions')
       .addField('June 17 2018 News', 'Added New Command + Awsome Feature')
+      .addField('June 23 2018 News', 'Fletch Out the Help Menu')
       .setColor('#808000')
       .setFooter(`Requested by ${message.author.tag}`)
       return message.channel.send(changelogembed);
@@ -115,5 +121,6 @@ client.on('message', async message => {
      .setFooter(`Requested by ${message.author.tag}`)
      return message.channel.send(avatarembed);
    }
-   
-});client.login(process.env.BOT_TOKEN);
+  
+});
+client.login(process.env.BOT_TOKEN);
