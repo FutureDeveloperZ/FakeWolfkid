@@ -17,7 +17,7 @@ client.on('message', async message => {
       .setTitle('List Of Commands | prefix f; | Help List ')
       .setDescription('There is available commands for this bot on list!')
       .addField(':newspaper: INFO', '7 Commands open \n``help info``')
-      .addField(':tada: FUN', '1 Commands open \n``help fun``)
+      .addField(':tada: FUN', '1 Commands open \n``help fun``')
       .setColor('RANDOM')
       .setFooter(`Requested by ${message.author.tag} | Help list`)
       return message.channel.send(helpembed);
