@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/Wolfkid20044/WolfkidFakeBot#readme",
   "dependencies": {
-    "discord.js": "11.3.2"
+    "discord.js": "11.4.0"
   }
 }
 
