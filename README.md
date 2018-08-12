@@ -3,17 +3,8 @@ This is a simple bot that I stole code from another bot, don't judge me xD
 This bot is still in beta.
 
 ## To Do List
-- [x] Get Developers
-- [x] 24/7
-- [x] Check To-do list Everyday
-- [x] Rewrite All The Commands And Files
-- [x] Make it Work
-- [x] Learn how to Code
-- [X] Fix The Bot Code
-- [X] Make Embed Commands
-- [ ]  Make it Public
-- [X] Out pass my Friends Bots
-- [x] Learn proper grammar
+• Funtinal
+
 
 ## Social Media
 Want to Help me to Code with me? <br>
