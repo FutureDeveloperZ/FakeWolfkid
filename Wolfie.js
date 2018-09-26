@@ -2,11 +2,21 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const config = require('./config.json');
 
+const wolfaxtra = require('./wolfaxtra.js');
+var S = require('string');
+
+
 client.on('ready', () => {
     client.user.setStatus('dnd');
-    client.user.setActivity('My Self | --> f; <--', {type: 'WATCHING'});
-    console.log('Uhhh I\'m ready!');
+    client.user.setActivity('With New Code | --> b; <--', {type: 'WATCHING'});
+    console.log(" ###   #     #  #     #####  #     #  #####");
+    console.log("#   #  # #   #  #       #    # #   #  #");
+    console.log("#   #  #  #  #  #       #    #  #  #  ####");
+    console.log("#   #  #   # #  #       #    #   # #  #");
+    console.log(" ###   #     #  ####  #####  #     #  #####");
+    console.log(`Bot name ${client.user.username}`)
 });
+
 
 client.on('message', async message => {
     if (message.author.bot) return;
@@ -18,7 +28,7 @@ client.on('message', async message => {
       .setTitle('List Of Commands | prefix f; | Help List ')
       .setDescription('There is available commands for this bot on list!')
       .addField(':newspaper: INFO', '8 Commands open \n``help info``')
-      .addField(':tada: FUN', '1 Commands open \n``help fun``')
+      .addField(':tada: FUN', '2 Commands open \n``help fun``')
       .setColor('RANDOM')
       .setFooter(`Requested by ${message.author.tag} | Help list`)
       return message.channel.send(helpembed);
@@ -36,7 +46,7 @@ client.on('message', async message => {
     if (message.content === prefix + 'help fun') {
       let helpfunembed = new Discord.RichEmbed()
       .setTitle('Fun Comamnds | prefix f; | Fun list')
-      .setDescription('There is available commands for FUN!\n ``avatar,``')
+      .setDescription('There is available commands for FUN!\n ``avatar, gayrate``')
       .setColor('RANDOM')
       .setFooter(`Requested by ${message.author.tag} | Help fun`)
       return message.channel.send(helpfunembed);
@@ -50,21 +60,35 @@ client.on('message', async message => {
       return message.channel.send(mediaembed);
     }
     
-    if (message.content === prefix + 'botinfo') {
-      let botinfoembed = new Discord.RichEmbed()
-      .setTitle('BotInfo')
-      .setDescription('Here is were you can find About the Bot Info!')
-      .addField('Version', '1.4 Stable')
-      .setThumbnail(client.user.avatarURL)
-      .addField('Bot Created', client.user.createdAt)
-      .addField('Bot Username', client.user.username)
-      .addField('Host We Use', 'Heroku')
-      .addField('Bot Code', 'JavaScript')
-      .addField('Librarys', ' discord.js')
-      .addField('Modules', 'Node.js')
-      .addField('Contributors + Helpers', 'People that Help me with the bot and contributors : Cheitroid#2928, Zyphen#8624, shadowolf#9212, PokemonLeader#1712')
-      return message.channel.send(botinfoembed);
-    }
+   if (message.content === prefix + 'botinfo') {
+      var seconds = process.uptime();
+        days = Math.floor(seconds / 86400);
+        seconds %= 86400;
+        hrs = Math.floor(seconds / 3600);
+        seconds %= 3600;
+        mins = Math.floor(seconds / 60);
+        secs = seconds % 60;
+        var uptime = days + ' days, ' + hrs + ' hours, ' + mins + ' minutes';
+        var stats = new wolfaxtra.SubFields()
+          .addField('Servers', client.guilds.size)
+          .addField('Channels', client.channels.size)
+          .addField('Users', client.users.size)
+          .addField('Uptime Bot', uptime)
+          .addField('RAM Usage', Math.round(process.memoryUsage().rss / 10485.76) / 100 + ' MB')
+          .toString();
+        var status = new Discord.RichEmbed()
+          .setColor(Math.floor(Math.random() * 16777215))
+          .setTitle('FakeWolfkidBOT | Information')
+          .setDescription('This is FakeWolfkid Created by Wolfkid ')
+          .setThumbnail(client.user.avatarURL)
+          .addField('Version', '1.7-Unstable')
+          .addField('<><><>', '×•×•×')
+          .addField('Owner', 'Wolfie#7213')
+          .addField('Created', client.user.createdAt)
+          .addField('<><><>', '•×•×•')
+          .addField('**Stats**', stats)
+          return message.channel.send(status);
+        }
    
     if (message.content === prefix + 'changelog') {
       let changelogembed = new Discord.RichEmbed()
@@ -125,5 +149,15 @@ client.on('message', async message => {
      return message.channel.send(avatarembed);
    }
   
+      if (message.content === prefix + 'gayrate'){
+      let user = message.mentions.users.first() || message.author;
+      let gayembed = new Discord.RichEmbed()
+      .setAuthor(`${user.username}`)
+      .addField(`Gay Rate`, `You Are **${Math.floor(Math.random() * 101)}% Gay**! :gay_pride_flag:`)
+     .setColor('RANDOM')
+     .setFooter(`馃槈馃槈 | Requested by ${message.author.tag}`)
+      return message.channel.send(gayembed)
+   }
+   
 });
 client.login(process.env.BOT_TOKEN);
