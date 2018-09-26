@@ -106,7 +106,7 @@ client.on('message', async message => {
      }
     
     if (message.content === prefix + 'server') {
-        let serverrmbed = new Discord.RichEmbed()
+        let serverembed = new Discord.RichEmbed()
         .setTitle('WolfGangMC Server')
         .setDescription('Check WolfGangMC discord Server [HERE](bit.ly/Join2Talk)\n\nVote for WolfGangMC [HERE](bit.ly/Vote4Reward)\n\nIP:wolfgangmc.tk\nPORT:25748')
         .setColor('RANDOM')
