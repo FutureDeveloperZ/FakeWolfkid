@@ -115,7 +115,7 @@ client.on('message', async message => {
     }
      
     //Added This To Seperate Commands and stuff -- This Section is for Fun cmd
-    and
+    
    if (message.content === prefix + 'avatar') {
      let avatarembed = new Discord.RichEmbed()
      .setTitle('Your Avatar!')
