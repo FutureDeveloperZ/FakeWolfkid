@@ -108,7 +108,7 @@ client.on('message', async message => {
     if (message.content === prefix + 'server') {
         let serverembed = new Discord.RichEmbed()
         .setTitle('WolfGangMC Server')
-        .setDescription('Check WolfGangMC discord Server [HERE](https://bit.ly/Join2Talk).\n\nVote for WolfGangMC [HERE](https://bit.ly/Vote4Reward).\n\nIP:wolfgangmc.tk\nPORT:25748')
+        .setDescription('Check WolfGangMC discord Server [HERE](https://bit.ly/Join2Talk).\n\nVote for WolfGangMC [HERE](https://bit.ly/Vote4Rewards).\n\nIP:wolfgangmc.tk\nPORT:25748')
         .setColor('RANDOM')
         .setFooter('Made By Wolfkid')
      return message.channel.send(serverembed);
