@@ -12,11 +12,12 @@ client.on('message', async message => {
     if (message.author.bot) return;
     let prefix = config.prefix;
 
-    if (message.content === prefix + 'help') {
+
+    if (message.content === prefix + 'help') {
       let helpembed = new Discord.RichEmbed()
       .setTitle('List Of Commands | prefix f; | Help List ')
       .setDescription('There is available commands for this bot on list!')
-      .addField(':newspaper: INFO', '7 Commands open \n``help info``')
+      .addField(':newspaper: INFO', '8 Commands open \n``help info``')
       .addField(':tada: FUN', '1 Commands open \n``help fun``')
       .setColor('RANDOM')
       .setFooter(`Requested by ${message.author.tag} | Help list`)
@@ -26,7 +27,7 @@ client.on('message', async message => {
     if (message.content === prefix + 'help info') {
       let helpeinfombed = new Discord.RichEmbed()
       .setTitle('Info commands | prefix f; | Info page ')
-      .setDescription('There is available commands for this Info \n``botinfo, changelog, dcinvite, media, userinfo, host``')
+      .setDescription('There is available commands for this Info \n``botinfo, changelog, dcinvite, media, userinfo, server``')
       .setColor('RANDOM')
       .setFooter(`Requested by ${message.author.tag} | Help info`)
       return message.channel.send(helpeinfombed);
@@ -69,14 +70,7 @@ client.on('message', async message => {
       let changelogembed = new Discord.RichEmbed()
       .setTitle('Changelog')
       .setDescription('Check out Whats New on The Bot :D')
-      .addField('May 11 2018 News', 'Code Added')
-      .addField('May 14 2018 News Huge Update', 'Added Embeds To Commands And Alot')
-      .addField('May 18 2018 News', 'Added Help Command And Few Commands Working again')
-      .addField('May 27 2018 News', 'Added Footers to #ffffffffCommands and Avatar Command')
-      .addField('May 30 2018 News', 'Remove Lewd Command as i bring alot of problems plus Adding Commands')
-      .addField('June 7 2018 News', 'Added Some awsome commands(do f; or b; for help) and Fix Descriptions')
-      .addField('June 17 2018 News', 'Added New Command + Awsome Feature')
-      .addField('June 23 2018 News', 'Fletch Out the Help Menu')
+      .addField('September 26', 'New Stuff Again')
       .setColor('#808000')
       .setFooter(`Requested by ${message.author.tag}`)
       return message.channel.send(changelogembed);
@@ -104,12 +98,21 @@ client.on('message', async message => {
    
    if (message.content === prefix + 'host') {
       let hostembed = new Discord.RichEmbed()
-      .setTitle('Check Our New Host')
-      .setDescription('Click This [Link](https://discord.gg/r9fYKEA) to Join our new Host and Host your Own Bot!!')
+      .setTitle('Unavailable')
+      .setDescription('Sorry :p')
       .setColor('WHITE')
       .setFooter(`${message.author.tag}`)
      return message.channel.send(hostembed);
      }
+    
+    if (message.content === prefix + 'server') {
+        let serverrmbed = new Discord.RichEmbed()
+        .setTitle('WolfGangMC Server')
+        .setDescription('Check WolfGangMC discord Server [HERE](bit.ly/Join2Talk)\n\nVote for WolfGangMC [HERE](bit.ly/Vote4Reward)\n\nIP:wolfgangmc.tk\nPORT:25748
+        .setColor('RANDOM')
+        .setFooter('Made By Wolfkid')
+     return message.channel.send(serverembed);
+    }
      
     //Added This To Seperate Commands and stuff -- This Section is for Fun cmd
     
