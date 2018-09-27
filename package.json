@@ -5,17 +5,17 @@
   "main": "Wolfie.js",
   "dependencies": {
     "apiai": "^4.0.3",
-    "discord.js": "^11.4.1",
+    "discord.js": "^11.4.2",
     "erlpack": "^0.1.0",
     "forever": "^0.15.3",
-    "imgur": "^0.2.1",
+    "imgur": "^0.3.1",
     "remove-markdown": "^0.3.0",
     "request": "^2.88.0",
     "string": "^3.3.3",
     "uws": "^99.0.0",
     "xml2js": "^0.4.19",
     "ms": "^2.1.1",
-    "ytdl-core": "^0.24.0"
+    "ytdl-core": "^0.26.0"
   },
   "devDependencies": {},
   "scripts": {
