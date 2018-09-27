@@ -19,8 +19,10 @@ client.on('ready', () => {
 
 
 client.on('message', async message => {
-    if (message.author.bot) return;
-    let prefix = config.prefix;
+if (!message.content.startsWith(prefix) || message.author.bot) return;
+
+const args = message.content.slice(prefix.length).split(' ');
+const command = args.shift().toLowerCase();
 
 
     if (message.content === prefix + 'help') {
@@ -87,7 +89,7 @@ client.on('message', async message => {
           .addField('Created', client.user.createdAt)
           .addField('<><><>', '•×•×•')
           .addField('**Stats**', stats)
-          return message.channel.send(status);
+         return message.channel.send(status);
         }
    
     if (message.content === prefix + 'changelog') {
@@ -97,7 +99,7 @@ client.on('message', async message => {
       .addField('September 26', 'New Stuff Again')
       .setColor('#808000')
       .setFooter(`Requested by ${message.author.tag}`)
-      return message.channel.send(changelogembed);
+     return message.channel.send(changelogembed);
     }
     
     if (message.content === prefix + 'dcinvite') {
@@ -105,7 +107,7 @@ client.on('message', async message => {
       .setTitle('Our support Discord server')
       .setDescription('Check out our [Discord server](http://bit.ly/FutureDevs) to get news of FakeWolfkid and if you have issues with the bot or not working property you can report it on #report or on our GitHub')
       .setColor('DARK')
-      return message.channel.send(dcinviteembed);
+     return message.channel.send(dcinviteembed);
     }
     
    if (message.content === prefix + 'userinfo') {
@@ -127,7 +129,7 @@ client.on('message', async message => {
       .setColor('WHITE')
       .setFooter(`${message.author.tag}`)
      return message.channel.send(hostembed);
-     }
+    }
     
     if (message.content === prefix + 'server') {
         let serverembed = new Discord.RichEmbed()
@@ -146,17 +148,16 @@ client.on('message', async message => {
      .setColor('RANDOM')
      .setImage(message.author.avatarURL) 
      .setFooter(`Requested by ${message.author.tag}`)
-     return message.channel.send(avatarembed);
+    return message.channel.send(avatarembed);
    }
   
-      if (message.content === prefix + 'gayrate'){
-      let user = message.mentions.users.first() || message.author;
-      let gayembed = new Discord.RichEmbed()
-      .setAuthor(`${user.username}`)
-      .addField(`Gay Rate`, `You Are **${Math.floor(Math.random() * 101)}% Gay**! :gay_pride_flag:`)
-     .setColor('RANDOM')
-     .setFooter(`馃槈馃槈 | Requested by ${message.author.tag}`)
-      return message.channel.send(gayembed)
+  if (message.content === prefix + 'gayrate'){
+    let user = message.mentions.users.first() || message.author;
+    let gayembed = new Discord.RichEmbed()
+    .setAuthor(`${user.username}`)    .addField(`Gay Rate`, `You Are **${Math.floor(Math.random() * 101)}% Gay**! :gay_pride_flag:`)
+    .setColor('RANDOM')
+    .setFooter(`馃槈馃槈 | Requested by ${message.author.tag}`)
+   return message.channel.send(gayembed)
    }
    
 });
