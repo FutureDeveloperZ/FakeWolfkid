@@ -1,32 +1,42 @@
 {
-  "name": "WolfkidFake",
-  "version": "1.0.0",
-  "description": "Simple Bot For Some Random User Call Wolfkid",
-  "main": "index.js",
-  "engines": {
-    "node": "10.0.0",
-    "npm": "*"
+  "name": "fakewolfkid",
+  "version": "0.1.4",
+  "description": "Multiuse bot",
+  "main": "Wolfie.js",
+  "dependencies": {
+    "apiai": "^4.0.3",
+    "discord.js": "^11.4.1",
+    "erlpack": "^0.1.0",
+    "forever": "^0.15.3",
+    "imgur": "^0.2.1",
+    "remove-markdown": "^0.3.0",
+    "request": "^2.88.0",
+    "string": "^3.3.3",
+    "uws": "^99.0.0",
+    "xml2js": "^0.4.19",
+    "ms": "^2.1.1",
+    "ytdl-core": "^0.24.0"
   },
+  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "test": "f;"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Wolfkid200444/WolfkidFakeBot.git"
+    "url": "git+https://github.com/FutureDeveloperZ/FakeWolfkid.git"
   },
   "keywords": [
-    "heroku",
-    "discord.js"
+    "Heroku",
+    "Discord.js",
+    "Node.js",
+    "Minecraft",
+    "ETC",
+    "DiscordBot"
   ],
   "author": "Wolfie",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Wolfkid200444/WolfkidFakeBot/issues"
+    "url": "https://github.com/FutureDeveloperZ/FakeWolfkid/issues"
   },
-  "homepage": "https://github.com/Wolfkid20044/WolfkidFakeBot#readme",
-  "dependencies": {
-    "discord.js": "11.4.2"
-  }
+  "homepage": "https://github.com/FutureDeveloperZ/FakeWolfkid#readme"
 }
-
