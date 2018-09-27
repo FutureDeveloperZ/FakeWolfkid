@@ -63,33 +63,33 @@ const command = args.shift().toLowerCase();
     }
     
    if (message.content === prefix + 'botinfo') {
-      var seconds = process.uptime();
-        days = Math.floor(seconds / 86400);
-        seconds %= 86400;
-        hrs = Math.floor(seconds / 3600);
-        seconds %= 3600;
-        mins = Math.floor(seconds / 60);
-        secs = seconds % 60;
-        var uptime = days + ' days, ' + hrs + ' hours, ' + mins + ' minutes';
-        var stats = new wolfaxtra.SubFields()
-          .addField('Servers', client.guilds.size)
-          .addField('Channels', client.channels.size)
-          .addField('Users', client.users.size)
-          .addField('Uptime Bot', uptime)
-          .addField('RAM Usage', Math.round(process.memoryUsage().rss / 10485.76) / 100 + ' MB')
-        var status = new Discord.RichEmbed()
-          .setColor(Math.floor(Math.random() * 16777215))
-          .setTitle('FakeWolfkidBOT | Information')
-          .setDescription('This is FakeWolfkid Created by Wolfkid ')
-          .setThumbnail(client.user.avatarURL)
-          .addField('Version', '1.7-Unstable')
-          .addField('<><><>', '¡Á6¦1¡Á6¦1¡Á')
-          .addField('Owner', 'Wolfie#7213')
-          .addField('Created', client.user.createdAt)
-          .addField('<><><>', '6¦1¡Á6¦1¡Á6¦1')
-          .addField('**Stats**', stats)
-         return message.channel.send(status);
-        }
+       var seconds = process.uptime();
+       days = Math.floor(seconds / 86400);
+       seconds %= 86400;
+       hrs = Math.floor(seconds / 3600);
+       seconds %= 3600;
+       mins = Math.floor(seconds / 60);
+       secs = seconds % 60;
+       var uptime = days + ' days, ' + hrs + ' hours, ' + mins + ' minutes';
+       var stats = new wolfaxtra.SubFields()
+           .addField('Servers', client.guilds.size)
+           .addField('Channels', client.channels.size)
+           .addField('Users', client.users.size)
+           .addField('Uptime Bot', uptime)
+           .addField('RAM Usage', Math.round(process.memoryUsage().rss / 10485.76) / 100 + ' MB')
+       var status = new Discord.RichEmbed()
+           .setColor(Math.floor(Math.random() * 16777215))
+           .setTitle('FakeWolfkidBOT | Information')
+           .setDescription('This is FakeWolfkid Created by Wolfkid ')
+           .setThumbnail(client.user.avatarURL)
+           .addField('Version', '1.7-Unstable')
+           .addField('<><><>', 'ï¿½ï¿½ï¿½6ï¿½1ï¿½ï¿½ï¿½6ï¿½1ï¿½ï¿½')
+           .addField('Owner', 'Wolfie#7213')
+           .addField('Created', client.user.createdAt)
+           .addField('<><><>', 'ï¿½6ï¿½1ï¿½ï¿½ï¿½6ï¿½1ï¿½ï¿½ï¿½6ï¿½1')
+           .addField('**Stats**', stats)
+       return message.channel.send(status);
+   }
    
     if (message.content === prefix + 'changelog') {
       let changelogembed = new Discord.RichEmbed()
@@ -153,11 +153,12 @@ const command = args.shift().toLowerCase();
   if (message.content === prefix + 'gayrate'){
     let user = message.mentions.users.first() || message.author;
     let gayembed = new Discord.RichEmbed()
-    .setAuthor(`${user.username}`)    .addField(`Gay Rate`, `You Are **${Math.floor(Math.random() * 101)}% Gay**! :gay_pride_flag:`)
+    .setAuthor(`${user.username}`)
+    .addField(`Gay Rate`, `You Are **${Math.floor(Math.random() * 101)}% Gay**! :gay_pride_flag:`)
     .setColor('RANDOM')
     .setFooter(`ðŸ˜‰ðŸ˜‰ | Requested by ${message.author.tag}`)
    return message.channel.send(gayembed)
-   }
-   
+  }
+
 });
 client.login(process.env.BOT_TOKEN);
