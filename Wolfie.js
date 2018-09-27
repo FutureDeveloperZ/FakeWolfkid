@@ -77,7 +77,6 @@ const command = args.shift().toLowerCase();
           .addField('Users', client.users.size)
           .addField('Uptime Bot', uptime)
           .addField('RAM Usage', Math.round(process.memoryUsage().rss / 10485.76) / 100 + ' MB')
-          .toString();
         var status = new Discord.RichEmbed()
           .setColor(Math.floor(Math.random() * 16777215))
           .setTitle('FakeWolfkidBOT | Information')
