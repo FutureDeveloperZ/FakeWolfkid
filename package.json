@@ -15,7 +15,7 @@
     "uws": "^99.0.0",
     "xml2js": "^0.4.19",
     "ms": "^2.1.1",
-    "ytdl-core": "^0.26.0"
+    "ytdl-core": "^0.26.1"
   },
   "devDependencies": {},
   "scripts": {
