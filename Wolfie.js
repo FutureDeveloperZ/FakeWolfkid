@@ -19,10 +19,8 @@ client.on('ready', () => {
 
 
 client.on('message', async message => {
-if (!message.content.startsWith(prefix) || message.author.bot) return;
-
-const args = message.content.slice(prefix.length).split(' ');
-const command = args.shift().toLowerCase();
+    if(message.author.bot) return;
+    let prefix = config.prefix
 
 
     if (message.content === prefix + 'help') {
@@ -57,7 +55,7 @@ const command = args.shift().toLowerCase();
     if (message.content === prefix + 'media') {
       let mediaembed = new Discord.RichEmbed()
       .setTitle('Check Wolfie Social Media')
-      .setDescription('Check Wolfie [Youtube Channel ](https://www.youtube.com/c/Wolfkid).\n Check Wolfie [Twitter](https://twitter.com/TheRealWolfkid).\n Check Wolfie [Fan Discord Server](http://bit.ly/WolfkidDiscord).\nAnd Also Check Wolfie [Github](https://github.com/Wolfkid200444)')
+      .setDescription('Check Wolfie [Youtube Channel](https://www.youtube.com/c/Wolfkid).\n Check Wolfie [Twitter](https://twitter.com/TheRealWolfkid).\n Check Wolfie [Minecraft Server](http://bit.ly/WolfkidDiscord).\nAnd Also Check Wolfie [Github](https://github.com/Wolfkid200444)')
       .setColor('RANDOM')
       return message.channel.send(mediaembed);
     }
@@ -67,6 +65,7 @@ const command = args.shift().toLowerCase();
       .setTitle('Changelog')
       .setDescription('Check out Whats New on The Bot :D')
       .addField('September 26', 'New Stuff Again')
+      .addField('October 23', 'Fix some Bugs And added small stuff')
       .setColor('#808000')
       .setFooter(`Requested by ${message.author.tag}`)
      return message.channel.send(changelogembed);
@@ -104,7 +103,7 @@ const command = args.shift().toLowerCase();
     if (message.content === prefix + 'server') {
         let serverembed = new Discord.RichEmbed()
         .setTitle('WolfGangMC Server')
-        .setDescription('Check WolfGangMC discord Server [HERE](https://bit.ly/Join2Talk).\n\nVote for WolfGangMC [HERE](https://bit.ly/Vote4Rewards).\n\nIP:wolfgangmc.tk\nPORT:25748')
+        .setDescription('Check WolfGangMC discord Server [HERE](https://bit.ly/Join2Talk).\n\nVote for WolfGangMC [HERE](https://bit.ly/Vote4Rewards).\n\nOur Forums [HERE](http://wolfgangmc.freeforums.net\n\nIP:wolfgangmc.tk\nPORT:25748')
         .setColor('RANDOM')
         .setFooter('Made By Wolfkid')
      return message.channel.send(serverembed);
