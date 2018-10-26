@@ -1,10 +1,5 @@
 # WolfkidFakeBot
-This is a simple bot that I stole code from another bot, don't judge me xD
-This bot is still in beta.
-
-## To Do List
-
-
+is a Moderator bot and with Fun Commands with special abilitys...
 
 ## Social Media
 Want to Help me to Code with me? <br>
