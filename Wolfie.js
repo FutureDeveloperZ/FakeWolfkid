@@ -33,7 +33,7 @@ client.on('message', async message => {
       .setDescription('There is available commands for this bot on list!')
       .addField(':tools: MOD', '2 Commands open \n``help mod``')
       .addField(':newspaper: INFO', '8 Commands open \n``help info``')
-      .addField(':tada: FUN', '2 Commands open \n``help fun``')
+      .addField(':tada: FUN', '3 Commands open \n``help fun``')
       .setColor('RANDOM')
       .setFooter(`Requested by ${message.author.tag} | Help list`)
       return message.channel.send(helpembed);
@@ -60,7 +60,7 @@ client.on('message', async message => {
     if (message.content === prefix + 'help fun') {
       let helpfunembed = new Discord.RichEmbed()
       .setTitle('Fun Comamnds | prefix f; | Fun list')
-      .setDescription('There is available commands for FUN!\n ``avatar, gayrate``')
+      .setDescription('There is available commands for FUN!\n ``avatar, gayrate, ping``')
       .setColor('RANDOM')
       .setFooter(`Requested by ${message.author.tag} | Help fun`)
       return message.channel.send(helpfunembed);
@@ -169,6 +169,58 @@ client.on('message', async message => {
     .setFooter(`Requested by ${message.author.tag}`)
    return message.channel.send(pingembed)
   } 
+   
+   function sendInfo(message, ip, port){
+    queryfor = "Query for " + ip + " " + port + ""; 
+    site = "https://use.gameapis.net/mcpe/query/extensive/" + ip + ":" + port;
+    status = "Offline";
+    list = null;
+    plugins = null;
+
+    request({url: site, json: true}, (err, response, i) => {
+        if(!err){
+            console.log(i);
+            if(i["status"] == true){
+                status = "Online";
+            }else{
+                sendOffline(message, ip, port);
+                return;
+            }
+            if(i["list"] == null){
+                list = "None";
+            }else{
+                list = i["list"].join();
+            }
+            if(i["plugins"] == null){
+                plugins = "None";
+            }else{
+                if(i["plugins"] == i["software"]){
+                    plugins = i["software"];
+                }else{
+                    plugins = i["plugins"].join();
+                }
+            }
+
+            message.channel.send(
+                queryfor + " (" + i["players"]["online"] +"/" + i["players"]["max"] +")\n
+" + 
+                "Status: " + status + "\n" +
+                "MOTD: " + i["motd"] + "\n" + 
+                "IP: " + ip + "\n" + 
+                "Port: " + port + "\n" +
+                "Protocol: " + i["protocol"] + "\n" +
+                "Version: " + i["version"] + "\n" +
+                "Software: " + i["software"] + "\n" +
+                "Map: " + i["map"] + "\n" +
+                "List: " + list + "\n" +
+                "Plugins: " + plugins + "\n" +
+                "Cached: " + i["cached"] + "
+"
+                );
+        }
+    });
+}
+   
    
    
    // MOD Commands
