@@ -1,5 +1,5 @@
 # WolfkidFakeBot
-is a Moderator bot and with Fun Commands with special abilitys...
+Is a Moderator bot and with Fun Commands with special abilitys...
 
 ## Social Media
 Want to Help me to Code with me? <br>
