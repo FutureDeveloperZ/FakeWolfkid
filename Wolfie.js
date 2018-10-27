@@ -40,7 +40,7 @@ client.on('message', async message => {
     }
   
     if (message.content === prefix + 'help mod') {
-      let helpmod = new Discord.RichEmbed()
+      let helpmodembed = new Discord.RichEmbed()
       .setTitle('Mod Commands | prefix f; | Mod Page ')
       .setDescription('There is available commands for this Mod \n``ban, kick``')
       .setColor('RANDOM')
@@ -60,7 +60,7 @@ client.on('message', async message => {
     if (message.content === prefix + 'help fun') {
       let helpfunembed = new Discord.RichEmbed()
       .setTitle('Fun Comamnds | prefix f; | Fun list')
-      .setDescription('There is available commands for FUN!\n ``avatar, gayrate, ping``')
+      .setDescription('There is available commands for FUN!\n ``avatar, gayrate, ping, coinflip``')
       .setColor('RANDOM')
       .setFooter(`Requested by ${message.author.tag} | Help fun`)
       return message.channel.send(helpfunembed);
@@ -170,7 +170,16 @@ client.on('message', async message => {
    return message.channel.send(pingembed)
   } 
    
-    
+ if (message.content === prefix + "coinflip") {
+   var coin = [
+   "HEADS!",
+   "TAILS!",
+   ]
+
+   let random = coin[Math.floor(Math.random() * coin.length)]
+
+   message.channel.send(random)
+  }
    
    // MOD Commands
    
