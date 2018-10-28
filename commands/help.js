@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
       .setDescription('There is available commands for this bot on list!')
       .addField(':newspaper: INFO', '9 commands available \n``help_info``')
       .addField(':tools: MODERATION', '4 commands available \n``help_mod``')
-      .addField(':tada: FUN', '3 commands available \n``help_fun``')
+      .addField(':tada: FUN', '4 commands available \n``help_fun``')
       .setColor('RANDOM')
       .setFooter(`Requested by ${message.author.tag} | Help list`)
       return message.channel.send(helpembed);
