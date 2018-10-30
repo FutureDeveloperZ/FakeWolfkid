@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
     .setAuthor(`${user.username}`)
     .addField(`Gay Rate`, `You Are **${Math.floor(Math.random() * 101)}% Gay**! :gay_pride_flag:`)
     .setColor('RANDOM')
-    .setFooter(`😃😃 | Requested by ${message.author.tag}`)
+    .setFooter(`馃槀馃槀 | Requested by ${message.author.tag}`)
     return message.channel.send(gayembed);
 }
 
