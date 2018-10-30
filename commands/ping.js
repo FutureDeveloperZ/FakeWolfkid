@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
     let pingembed = new Discord.RichEmbed()
     .setTitle('Your Ping')
-    .addField('Ping! Me Harder Daddy', `**${Math.round(client.ping)} ms!**`)
+    .addField('Ping! Me Harder Daddy', 'Math.round(client.ping) ms')
     .setFooter(`Requested by ${message.author.tag} | Help fun`)
     return message.channel.send(pingembed);
 }
