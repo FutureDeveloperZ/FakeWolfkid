@@ -1,9 +1,12 @@
 const Discord = require('discord.js');
 const config = require('../config.json');
 const ms = require('ms');
+const errors = require('../util/errors.js');
 const chalk = require('chalk');
 
 module.exports.run = async (client, message, args) => {
+  if (!message.member.hasPermission(`${module.exports.help.permission}`)) return errors.noPermissions(message, `${module.exports.help.permission}`);
+
   let user = message.guild.member(message.mentions.members.first());
   if (!user) return errors.invalidUser(message);
   if (user.hasPermission(`${module.exports.help.permission}`)) return errors.cannotPunish(message);
