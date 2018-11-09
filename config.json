@@ -2,7 +2,8 @@
 {
   "__NOTICE:": "Copy this to config.json and edit your details",
   
-  "prefix": "f;",
+  "prefix": "*",
+
   "white": "#ffffff",
   "red": "#ff0000",
   "orange": "#ffa500",
