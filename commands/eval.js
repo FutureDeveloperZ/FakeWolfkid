@@ -4,7 +4,7 @@ const config = require('../config.json');
 module.exports.run = async (bot, message, args) => {
  let embed = new Discord.RichEmbed()
   .setTitle("Evaluation")
-  .setDescription("Sorry, the `eval` command can only be executed by the Developer.")
+  .setDescription("Sorry, the `eval` command can only be executed by the Main Developer.")
   .setColor("#cdf785");
   if(message.author.id !== config.ownerid) return message.channel.send(embed);
   function clean(text) {
@@ -16,9 +16,9 @@ module.exports.run = async (bot, message, args) => {
       const code = args.join(" ");
       let noarg = new Discord.RichEmbed()
          .setColor("RED")
-         .setTitle("Usage: poll <question>")
+         .setTitle("Usage: eval <eval crap>")
 
-      if(!arg) return message.channel.send(noarg)
+      if(!code) return message.channel.send(noarg)
  
   let embed = new Discord.RichEmbed()
       .setTitle(`Evaluated in ${Math.round(bot.ping)}ms`)
