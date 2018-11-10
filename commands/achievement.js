@@ -1,4 +1,5 @@
 const snekfetch = require('snekfetch');
+const Discord = require("Disocrd.js");
 
 module.exports.run = async(bot, message, args) => {
   let [title, contents] = args.join(" ").split("|");
