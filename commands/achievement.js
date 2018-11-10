@@ -8,7 +8,7 @@ module.exports.run = async(bot, message, args) => {
        .setTimestamp()
        .setTitle("Usage: Achievement <txt>")
 
-if(!arg) return message.channel.send(noarg)
+if(!title, contents) return message.channel.send(noarg)
 	
   if(!contents) {
     [title, contents] = ["Achievement Get!", title];
