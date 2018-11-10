@@ -14,11 +14,12 @@ module.exports.run = async (bot, message, args) => {
       return text;
 }try {
       const code = args.join(" ");
-      let evaled = eval(code);
-      let rawEvaled = evaled;
-      if (typeof evaled !== "string")
-        evaled = require("util").inspect(evaled);
+      let noarg = new Discord.RichEmbed()
+         .setColor("RED")
+         .setTitle("Usage: poll <question>")
 
+      if(!arg) return message.channel.send(noarg)
+ 
   let embed = new Discord.RichEmbed()
       .setTitle(`Evaluated in ${Math.round(bot.ping)}ms`)
       .addField(":inbox_tray: Input", `\`\`\`js\n${code}\n\`\`\``)
