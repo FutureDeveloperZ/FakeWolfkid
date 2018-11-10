@@ -1,7 +1,6 @@
 const Discord = require("discord.js")
-var includes = require('./includes.js');
 
-  module.exports.run = async (bot, message, args, helpers) => {
+  module.exports.run = async (bot, message, args) => {
     const facts = [
     'There are warehouses so big they have their own WEATHER.',
     'In 1903 the Wright brothers flew for 59 seconds. 38 years later the Japanese bombed Pearl Harbor. 28 years after that, we landed on the moon.',
