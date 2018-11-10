@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
       .addField(':camara: IMAGE', 'Img Info \n``help_img``')
       .addField(':hammer: OWNER', 'Bot Owner Info \n``help_owner``')
       .setColor('RANDOM')
-      .setFooter(`Requested by ${message.author.tag} | Help list`)
+      .setFooter(`Requested by ${message.author.tag} | Help list`, `${message.author.avatrURL}`)
       return message.channel.send(helpembed);
 
 }
