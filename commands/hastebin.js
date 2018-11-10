@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
     if (!args.slice(0)
 		.join(' ')) return message.channel.send('Please, provide the text! Usage: hastebin <text>')
 		.then(msg => msg.delete({
-			timeout: 50000
+			timeout: 300000
 		}));
 	snekfetch.post('https://hastebin.com/documents')
 		.send(args.slice(0)
