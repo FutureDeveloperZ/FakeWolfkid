@@ -14,6 +14,10 @@ module.exports.run = async (bot, message, args) => {
       return text;
 }try {
       const code = args.join(" ");
+      let evaled = eval(code);
+      let rawEvaled = evaled;
+      if (typeof evaled !== "string")
+        evaled = require("util").inspect(evaled);
       let noarg = new Discord.RichEmbed()
          .setColor("RED")
          .setTimestamp()
