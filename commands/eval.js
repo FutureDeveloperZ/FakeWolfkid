@@ -16,6 +16,8 @@ module.exports.run = async (bot, message, args) => {
       const code = args.join(" ");
       let noarg = new Discord.RichEmbed()
          .setColor("RED")
+         .setTimestamp()
+         .setFooter(`Requested ${message.author.tag}`, `${message.author.avatarURL}`)
          .setTitle("Usage: eval <eval crap>")
 
       if(!code) return message.channel.send(noarg)
