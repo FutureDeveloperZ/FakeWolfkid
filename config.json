@@ -15,8 +15,13 @@
   
   "mainguild": "416713399213359107",
   "juiceid": "ID of the Raspberry juice emoji",
-  "ownerid": "282978672711827456",
   
+  
+  "ownerid": [
+    "282978672711827456",
+    "510919950253162518"
+  ],
+    
   "blocked": [
     "blocked",
     "commands"
