@@ -2,13 +2,15 @@ const snekfetch = require('snekfetch');
 const Discord = require("discord.js");
 
 module.exports.run = async(bot, message, args) => {
-  let [title, contents] = args.join(" ").split("|");
+  let contents = args.join(" ")
   let noarg = new Discord.RichEmbed()
        .setColor("RED")
        .setTimestamp()
-       .setTitle("Usage: Achievement <txt>")
+       .setTitle("Usage: Achievement <ur crappy msg>")
 
-if(!title, contents) return message.channel.send(noarg)
+  let title = "Achievement Get!"
+  
+if(!contents) return message.channel.send(noarg)
 	
   if(!contents) {
     [title, contents] = ["Achievement Get!", title];
