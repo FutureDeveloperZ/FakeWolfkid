@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
     let helpeinfombed = new Discord.RichEmbed()
-      .setTitle('Info commands | prefix ? | Info page ')
+      .setTitle('Info commands | prefix f; | Info page ')
       .setDescription('There 5 Available Commands')
       .addField(':homes: GUILD', '``serverinfo``')
       .addField('📕 GENERAL', '``botinfo, changelog, userinfo``')
