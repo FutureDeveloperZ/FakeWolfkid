@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
       .addField(':newspaper: INFO', 'Information \n``help_info``')
       .addField(':tools: MODERATION', 'Mod Info \n``help_mod``')
       .addField(':tada: FUN', 'Fun Info \n``help_fun``')
-      .addField(':camara: IMAGE', 'Img Info \n``help_img``')
+      .addField(':camera: IMAGE', 'Img Info \n``help_img``')
       .addField(':hammer: OWNER', 'Bot Owner Info \n``help_owner``')
       .setColor('RANDOM')
       .setFooter(`Requested by ${message.author.tag} | Help list`, `${message.author.avatarURL}`)
