@@ -29,7 +29,6 @@ const Discord = require("discord.js")
     'Lighters were invented before matches.'
     ];
     var itemsss = facts[Math.floor(Math.random()*facts.length)];
-    helpers.sendEmbed(message.channel, "Fact", [
       {
         name: "Ready for a cool fact?",
         value: itemsss
