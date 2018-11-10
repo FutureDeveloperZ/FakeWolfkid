@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
       .setDescription('There is 6 Available Commands ')
       .addField('📕 GENERAL', '`achievement, ``')
       .setColor('RANDOM')
-      .setFooter(`Requested by ${message.author.tag} | Help Image`, `${message.author.avatarURL})
+      .setFooter(`Requested by ${message.author.tag} | Help Image`, `${message.author.avatarURL}`)
       return message.channel.send(embed);
       
 }
