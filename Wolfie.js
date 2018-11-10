@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const superagent = require('superagent');
 const client = new Discord.Client();
 const config = require('./config.json');
 const activity = require('./resources/activity.json');
