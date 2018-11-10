@@ -4,6 +4,14 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
 
 let arg = args.join(" ")
+
+let noarg = new Discord.RichEmbed()
+.setColor("RED")
+.setTitle("Usage: poll <question>")
+
+if(!arg) return message.channel.send(noarg)
+
+
 let poll = new Discord.RichEmbed()
 .setColor("RANDOM")
 .setTitle("Poll Command")
