@@ -1,4 +1,4 @@
-const Discord = require("disocrd.js")
+const Discord = require("discord.js")
 var includes = require('./includes.js');
 
   module.exports.run = async (bot, message, args, helpers) => {
