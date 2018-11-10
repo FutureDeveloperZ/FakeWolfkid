@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#ff9900")
     .setTitle("Why does someone put a command like this?")
     .setImage(body.neko)
-    .setTimestap()
+    .setTimestamp()
     .setFooter(`Requested by ${message.author.tag}`, `${message.author.avatarURL}`);
 
     message.channel.send(hentaiEmbed);
