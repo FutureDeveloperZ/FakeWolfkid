@@ -3,13 +3,13 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
     let bUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if(!bUser) 
-    let noarg = new Discord.RichEmbed()
+    let bUser = new Discord.RichEmbed()
        .setColor("RED")
        .setTimestamp()
        .setFooter(`Requested by ${messsage.author.tag}`, `${message.author.avatarURL}`)
        .setTitle("Usage: Ban <USER> ")
 
-if(!bUser) return message.channel.send(noarg)    
+if(!bUser) return message.channel.send(bUser)    
     let bReason = args.join(" ").slice(22);
     if(!message.member.hasPermission("MANAGE_MEMBERS")) return message.channel.send("No can do pal!");
     if(bUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send("That person can't be ban!");
