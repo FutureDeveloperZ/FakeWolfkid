@@ -3,8 +3,8 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {      
       let embed = new Discord.RichEmbed()
       .setTitle('NSFW Commands | prefix f; | Help NSFW ')
-      .setDescription('There is 1 Available Command!')  
-      .addField(':smirk: GENERAL', '``lewd, porn``')
+      .setDescription('There is 3 Available Command!')  
+      .addField(':smirk: GENERAL', '``lewd, porn, ecchi``')
       .setColor('RANDOM')
       .setTimestamp()
       .setFooter(`Requested by ${message.author.tag} | Help list`, `${message.author.avatarURL}`)
