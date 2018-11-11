@@ -17,7 +17,7 @@ exports.run = (client, msg, args) => {
         embed.setColor("WHITE")
             .setAuthor(`Results for ${args.join(' ')}`, googleIcon)
             .setThumbnail(googleThumbnail)
-            .addField(`**${link.title} - ${link.href}**`, link.description)
+            .addField(`**${link.Title} - ${link.href}**`, link.description)
       return message.channel.send(embed)
         
         
