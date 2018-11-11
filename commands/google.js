@@ -24,8 +24,8 @@ exports.run = (client, msg, args) => {
             msg.channel.sendMessage("There was an error!\n" + e);
         });
     });
-}
-
-exports.help = {
+    
+ }
+ module.exports.help = {
   name: 'google'
-};
+}
