@@ -5,7 +5,9 @@ const emoji = ['🤣', '👅', '😱', '😆', '😂'];
 module.exports.run = async (client, message) => {
     fetch.get('https://api.apithis.net/yomama.php').then(joe => {
         const joke = new Discord.RichEmbed()
-    .addField(`${emoji[~~(Math.random() * emoji.length)]}`, joe.body);
+        .addField(`${emoji[~~(Math.random() * emoji.length)]}`, joe.body)
+        .setTimestamp()
+        .setFooter(`Requested by ${message.author.tag}`, `${message.author.avatarURL}`)
         message.channel.send({embed: joke}).catch(e => logger.error(e));
     })
   .catch(e => logger.error(e));
