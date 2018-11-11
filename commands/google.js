@@ -2,6 +2,7 @@ const google = require('google');
 const Discord = require('discord.js');
 
 exports.run = (client, msg, args) => {
+    
     const embed = new Discord.RichEmbed();
     msg.channel.startTyping();
     google.resultsPerPage = 1;
@@ -24,13 +25,6 @@ exports.run = (client, msg, args) => {
         });
     });
 }
-
-exports.conf = {
-  enabled: true,
-  guildOnly: false,
-  aliases: [],
-  permLevel: 0
-};
 
 exports.help = {
   name: 'google'
