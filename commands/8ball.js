@@ -11,7 +11,9 @@ module.exports.run = async (bot, message, args) => {
   .setAuthor(message.author.tag)
   .setColor("#FF0000")
   .addField(":thinking: Question:", question)
-  .addField("Answer:", replies[result]);
+  .addField("Answer:", replies[result])
+  .setTimestamp()
+  .setFooter(`Requested by ${message.author.tag}`, `${message.author.avatarURL}`)
   
   message.channel.send(ballembed);
   
