@@ -18,7 +18,9 @@ exports.run = (client, msg, args) => {
             .setAuthor(`Results for ${args.join(' ')}`, googleIcon)
             .setThumbnail(googleThumbnail)
             .addField(`**${link.title} - ${link.href}**`, link.description)
-
+      return message.channel.send(embed)
+        
+        
             msg.channel.stopTyping(true);
             msg.channel.sendEmbed(embed).catch(e => {
             msg.channel.sendMessage("There was an error!\n" + e);
