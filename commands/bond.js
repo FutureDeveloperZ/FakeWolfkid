@@ -2,7 +2,7 @@ const Discord = require("discord.js")
 
 exports.run = async (bot, message, args) => {
 
-  if(!args[0]) return message.channel.send("**Mention a user or users that you want to bond.** `?bond <user> <user>`")
+  if(!args[0]) return message.channel.send("**Mention a user or users that you want to bond.** \n `bond <user> <user>`")
 
    var bondLevel = Math.floor(Math.random() * 102);
    let user1 = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
