@@ -6,6 +6,7 @@ module.exports.run = async (bot, message, args) => {
       .setDescription('There is 9 Available Commands ')
       .addField('📕 GENERAL', '``avatar, gayrate, 8ball, poll, ascii, coinflip, quiz, rate ``')
       .addField(':joy: JOKES', '``joke, yomama``')
+      ,addField(':hearts LOVE', '``bond``')
       .setColor('RANDOM')
       .setFooter(`Requested by ${message.author.tag} | Help fun`)
       return message.channel.send(helpfunembed);
