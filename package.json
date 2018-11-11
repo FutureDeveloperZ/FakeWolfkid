@@ -27,6 +27,7 @@
     "chalk": "^2.4.1",
     "discord.js": "^11.4.2",
     "fs": "0.0.1-security",
+    "google": "^2.1.0",
     "ms": "^2.1.1",
     "node-fetch": "^2.2.1",
     "quick.hook": "^1.5.1",
