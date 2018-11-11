@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
     let bUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if(!bUser) 
-    let bUser = new Discord.RichEmbed()
+    if bUser = new Discord.RichEmbed()
        .setColor("RED")
        .setTimestamp()
        .setFooter(`Requested by ${messsage.author.tag}`, `${message.author.avatarURL}`)
