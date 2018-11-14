@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
      .setTitle(`${message.author} Avatar`)
      .setColor('RANDOM')
      .setImage(message.author) 
-     .setFooter(`Requested by ${message.author.tag}`)
+     .setFooter(`Requested by ${message.author.tag}`, `${message.author.avatarURL}`)
      return message.channel.send(avatarembed);
 }
 
