@@ -1,6 +1,11 @@
 const Discord = require('discord.js');
+const superagent = require('superagent');
 const client = new Discord.Client();
 const config = require('./config.json');
+const activity = require('./resources/activity.json');
+const status = require('./resources/status.json');
+
+let prefix = config.prefix
 
 const wolfaxtra = require('./wolfaxtra.js');
 var S = require('string');
@@ -29,8 +34,14 @@ fs.readdir("./commands/", (err, files) => {
 
 
 client.on('ready', () => {
-    client.user.setStatus('dnd');
-    client.user.setActivity('JOIN WOLFGANGMC | f;', {type: 'WATCHING'}); 
+  setInterval(() => {
+        const onStatusInterval = Math.floor(Math.random() * (status.stats.length - 1) + 1);
+        client.user.setStatus(status.stats[onStatusInterval]);
+    }, 1000);
+    setInterval(() => {
+        const onInterval = Math.floor(Math.random() * (activity.games.length - 1) + 1);
+        client.user.setActivity(activity.games[onInterval], {type: 'STREAMING'});
+    }, 9000); 
     console.log(" ###   #     #  #     #####  #     #  #####");
     console.log("#   #  # #   #  #       #    # #   #  #");
     console.log("#   #  #  #  #  #       #    #  #  #  ####");
@@ -41,16 +52,16 @@ client.on('ready', () => {
 
 
 client.on('message', async message => {
-    if(message.author.bot) return;
+    if (message.author.bot) return;
     if (message.channel.type === 'dm') return;
+    if (!message.content.startsWith(prefix)) return;
   
-    let prefix = config.prefix
     let messageArray = message.content.split(' ');
     let cmd = messageArray[0];
     let args = messageArray.slice(1);
-    
     let commandfile = bot.commands.get(cmd.slice(prefix.length));
     if (commandfile) commandfile.run(client,message,args);
+  
 });
 
 client.login(process.env.BOT_TOKEN);

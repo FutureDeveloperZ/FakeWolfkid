@@ -4,12 +4,15 @@ module.exports.run = async (bot, message, args) => {
       let helpembed = new Discord.RichEmbed()
       .setTitle('List of Commands | prefix f; | Help List ')
       .setDescription('There is available commands for this bot on list!')
-      .addField(':newspaper: INFO', '6 commands available \n``help_info``')
-      .addField(':tools: MODERATION', '5 commands available \n``help_mod``')
-      .addField(':tada: FUN', '5 commands available \n``help_fun``')
-      .addField(':hammer: OWNER', '2 commamds avalible \n``help_owner``')
+      .addField(':newspaper: INFO', 'Information \n``help_info``')
+      .addField(':tools: MODERATION', 'Mod Commans \n``help_mod``')
+      .addField(':tada: FUN', 'Fun Commands \n``help_fun``')
+      .addField(':camera: IMAGE', 'Img Commands \n``help_img``')
+      .addField(':smirk: NSFW', 'NSFW Commands \n``help_nsfw``')
+      .addField(':hammer: OWNER', 'Bot Owner Commands \n``help_owner``')
       .setColor('RANDOM')
-      .setFooter(`Requested by ${message.author.tag} | Help list`)
+      .setTimestamp()
+      .setFooter(`Requested by ${message.author.tag} | Help list`, `${message.author.avatarURL}`)
       return message.channel.send(helpembed);
 
 }
